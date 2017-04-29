@@ -30,7 +30,7 @@ if (!empty($_POST)) {
 
         $user->Gebruikersnaam = $_POST["Gebruikersnaam"];
         $user->Email = $_POST["Email"];
-        $user->Paswoord = password_hash($_POST["paswoord"], PASSWORD_DEFAULT, $options);
+        $user->Paswoord = password_hash($_POST["Paswoord"], PASSWORD_DEFAULT, $options);
 
         $conn= Db::getInstance();
 
@@ -67,12 +67,15 @@ if (!empty($_POST)) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Evoke - Account aanmaken</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
-
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/login.css">
 
 </head>
 <body>
 
-    <h2>Account aanmaken</h2>
+<header>
+    <h1>Account aanmaken</h1>
+</header>
 
     <div>
         <?php if (isset($error)):?>
@@ -81,7 +84,7 @@ if (!empty($_POST)) {
             </div>
         <?php endif; ?>
     </div>
-    <form method="post" name="loggin" action="#" id="loggin"/>
+    <form method="post" action="" id="login"/>
 
     <fieldset>
         <label>Gebruikersnaam</label>
@@ -94,17 +97,17 @@ if (!empty($_POST)) {
     </fieldset>
 
     <fieldset>
-        <label>Password</label>
+        <label>Paswoord</label>
         <input id="password" name="password" type="password" placeholder="Geef hier je paswoord in"/>
     </fieldset>
 
     <fieldset>
-        <label>Bevestig password</label>
+        <label>Bevestig paswoord</label>
         <input id="password" name="password" type="password" placeholder="Bevestig hier je paswoord"/>
     </fieldset>
 
     <fieldset>
-        <label>In welk vak bevindt u zich?</label>
+        <label>In welk vak bevindt u zich? <span>optioneel</span></label>
         <select>
             <option value="vak1">Vak 1</option>
             <option value="vak2">Vak 2</option>
@@ -114,7 +117,7 @@ if (!empty($_POST)) {
     </fieldset>
 
     <fieldset>
-        <input type="submit" name='submit' value="Account aanmaken" />
+        <button class="button" type="submit">Account aanmaken</button>
     </fieldset>
 
     </form>

@@ -47,6 +47,10 @@ if (!empty($_POST)) {
 <head>
     <meta charset="UTF-8">
     <title>Evoke - login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
@@ -56,7 +60,12 @@ if (!empty($_POST)) {
         </div>
     <?php endif; ?>
 
-    <form action="" method="post" id="login">
+<div class="topheader">
+    <a href="index.php"><-</a>
+    <h1>Inloggen</h1>
+</div>
+
+<form action="" method="post" id="login">
 
         <fieldset>
             <label for="email">Gebruikersnaam</label>
@@ -68,18 +77,20 @@ if (!empty($_POST)) {
             <input name="paswoord" id="paswoord" type="paswoord" placeholder="geef hier je paswoord in"/>
         </fieldset>
 
-        <fieldset>
-            <input type="checkbox" name="inloggen" value="ingelogd">Blijf ingelogd
+        <fieldset class="1">
+            <input id="checkbox" type="checkbox" name="inloggen" value="ingelogd">
+            <label class="stayLoggedin">Blijf ingelogd</label>
         </fieldset>
 
-        <a href="#">Paswoord vergeten</a>
+
+        <a class="forgetPassword" href="#">Paswoord vergeten</a>
 
         <fieldset>
-            <button type="submit">Inloggen</button>
+            <button class="button" type="submit">Inloggen</button>
         </fieldset>
-    </form>
+</form>
 
-    <p>Nog geen account? <a href="registration.php">Registreer</a></p>
+    <p class="noAccount">Nog geen account? <a href="registration.php">Registreer</a></p>
 
 
 </body>
