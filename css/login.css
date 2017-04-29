@@ -1,38 +1,39 @@
 html{
-    background-color: black;
-    margin-left: 40px;
-    margin-right: 40px;
+    background-color: #F6D180;
 }
 
 .topheader a{
     text-decoration: none;
-    color:white;
-    font-wi 50px;
+    display: block;
+    width: 40px;
+    margin-left: 10px;
 
 }
 .topheader h1{
     color:white;
     font-size: 40px;
-    padding: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-bottom: 10px;
     font-weight: 700;
     letter-spacing: 1.5px;
-
 }
 
 form{
     margin-top: 40px;
     display: table;
+    width: 250px;
 }
 
 fieldset{
     border:none;
 }
 
-label {
+#login label {
     display: block;
     text-transform: uppercase;
-    font-size: 16px;
-    color: #de1641;
+    font-size: 14px;
+    color: #850D27;
     letter-spacing:1px;
     font-weight: 700;
 }
@@ -45,18 +46,18 @@ input{
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 2px solid #de1641;
+    border-bottom: 2px solid #850D27;
     width: 250px;
     margin: 15px 0px;
     font-size: 16px;
     padding-bottom: 15px;
     font-weight: 400;
-    color: #b5b5b5;
+    color: white;
 }
 .stayLoggedin {
     text-decoration: none;
     font-size: 13px;
-    color: #de1641;
+    color: #850D27;
     font-weight: 700;
     text-transform: capitalize;
 }
@@ -64,9 +65,16 @@ input{
 .forgetPassword{
     text-decoration: none;
     font-size: 13px;
-    color: #de1641;
-    font-weight: 700;
+    color: #850D27;
+    font-weight: 600;
 
+}
+
+.stayloggin label{
+    text-decoration: none;
+    font-size: 13px;
+    color: #850D27;
+    font-weight: 600;
 }
 
 .noAccount{
@@ -91,9 +99,9 @@ input{
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    width: 250px;
+    width: 300px;
     border-radius: 30px;
 }

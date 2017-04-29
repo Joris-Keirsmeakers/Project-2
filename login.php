@@ -61,7 +61,7 @@ if (!empty($_POST)) {
     <?php endif; ?>
 
 <div class="topheader">
-    <a href="index.php"><-</a>
+    <a href="index.php"><img src="img/icon_arrow.svg" alt="#"></a>
     <h1>Inloggen</h1>
 </div>
 
@@ -77,7 +77,7 @@ if (!empty($_POST)) {
             <input name="paswoord" id="paswoord" type="paswoord" placeholder="geef hier je paswoord in"/>
         </fieldset>
 
-        <fieldset class="1">
+        <fieldset class="stayloggin">
             <input id="checkbox" type="checkbox" name="inloggen" value="ingelogd">
             <label class="stayLoggedin">Blijf ingelogd</label>
         </fieldset>
