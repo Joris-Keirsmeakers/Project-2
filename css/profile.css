@@ -1,0 +1,174 @@
+html{
+    background: url('../img/background_home.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+main{
+    margin-left: 20px;
+}
+
+h1{
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: 700;
+    color:white;
+    margin-top: 40px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 28px;
+
+}
+
+.nav_first, .nav_second{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+
+
+}
+
+.nav_first{
+    background-color: #C7133A;
+    color:white;
+}
+
+.nav_second{
+    background-color: white;
+    color: #9a9a9a;
+
+}
+
+.nav{
+    width: 280px;
+    padding-top: 20px;
+    margin-left: 20px;
+
+}
+
+.nav a{
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+#fieldset_paswoord p{
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #850D27;
+    letter-spacing:1px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#fieldset_paswoord label{
+    color:white;
+    font-size: 10px;
+    font-weight: 600;
+    display:inline-block;
+}
+
+#fieldset_paswoord input{
+    display:inline-block;
+    width: 100px;
+    height:0px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 10px;
+    padding: 10px;
+}
+
+#fieldset_paswoord button{
+    background-color: #C7133A;
+    border: none;
+    color: white;
+    padding: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    margin-left: 5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    width: 80px;
+    border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+#fieldset_delete button{
+    border: 2px solid #850D27;
+    background-color: transparent;
+    color: #850D27;
+    padding: 8px;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 20px;
+
+}
+
+fieldset{
+    border:none;
+}
+
+form{
+    margin-top: 30px;
+    display: table;
+    width: 280px;
+    margin-left: 5px;
+
+}
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #850D27;
+    letter-spacing:1px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+input{
+    border:0;
+    bottom: 0;
+    background: transparent;
+    border-bottom: 2px solid #850D27;
+    font-size: 14px;
+    font-weight: 400;
+    color:white;
+    width: 160px;
+    margin: 15px 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#fieldset_user button, #fieldset_email button{
+    background-color: #C7133A;
+    border: none;
+    color: white;
+    padding: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    margin-left: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 80px;
+    border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+section{
+    clear:both;
+}
+
+
+

@@ -1,107 +1,171 @@
 html{
-    background-color: #F6D180;
+    background: url('../img/background_splash_.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
 }
 
-.topheader a{
+.topheader a, .topheader_registration a{
     text-decoration: none;
     display: block;
-    width: 40px;
-    margin-left: 10px;
+    width: 30px;
+    margin-left: 20px;
 
 }
 .topheader h1{
     color:white;
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 5px;
-    margin-left: 10px;
+    margin-left: 20px;
     padding-bottom: 10px;
     font-weight: 700;
     letter-spacing: 1.5px;
 }
 
+.topheader_registration h1{
+    color:white;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
 form{
-    margin-top: 40px;
+    margin-top: 30px;
     display: table;
-    width: 250px;
+    width: 280px;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 fieldset{
     border:none;
 }
 
-#login label {
+#login label, #registration label {
     display: block;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 11px;
     color: #850D27;
     letter-spacing:1px;
     font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
-label span{
-    font-size: 10px;
-}
-
-input{
+#login input, #registration input{
     border: 0;
     outline: 0;
     background: transparent;
     border-bottom: 2px solid #850D27;
-    width: 250px;
+    width: 280px;
     margin: 15px 0px;
-    font-size: 16px;
+    font-size: 14px;
     padding-bottom: 15px;
     font-weight: 400;
-    color: white;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
 }
-.stayLoggedin {
-    text-decoration: none;
-    font-size: 13px;
-    color: #850D27;
-    font-weight: 700;
-    text-transform: capitalize;
+
+#registration input{
+    margin: 12px 0px;
+}
+
+#login input::placeholder, #registration input::placeholder {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .forgetPassword{
     text-decoration: none;
     font-size: 13px;
     color: #850D27;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+
 
 }
-
-.stayloggin label{
-    text-decoration: none;
+.stayloggin {
     font-size: 13px;
     color: #850D27;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .noAccount{
     font-size: 13px;
     text-align: center;
-    color: #de1641;
-    font-weight: 700;
+    color: #C7133A;
+    font-weight: 600;
+    padding-bottom: 40px;
 }
 
 .noAccount a{
-    color: black;
+    color: white;
+    font-weight: 600;
+
 }
 
-
-
 .button{
-    background-color: #de1641;
+    background-color: #C7133A;
     border: none;
     color: white;
-    padding: 15px 0px;
+    padding: 15px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    width: 300px;
+    width: 280px;
     border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.button_registratie {
+    background-color: #C7133A;
+    border: none;
+    color: white;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 280px;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+#vak label span{
+    font-size: 8px;
+}
+
+#vak label{
+    margin: 10px 0px;
+}
+
+#vak select{
+    border: 1px solid #850D27;
+    background: none;
+    border-radius: 5px;
+    width: 100px;
+    color: #850D27;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 2px;
 }

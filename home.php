@@ -11,26 +11,49 @@
 </head>
 
 <body>
+
+<main>
+    <h1>Welkom,</br> <span>Username</span></h1>
+
+    <p>Welkom op Evoke, de nieuwe app van </br>
+        KV Mechelen, waarmee jij de sfeer en stadion-</br>
+        beleving mee helpt bepalen tijdens de match. </p> </br>
+
+        <p>Tijdens de match kan je foto’s en reacties </br>
+            posten met een vooropgestelde hashtag. </br>
+            Elke match krijgt een nieuwe hashtag, zodat </br>
+            elke match een unieke belevening wordt. </p> </br>
+
+        <p>Vergeet ook niet in te loggen na de match op </br>
+            onze site, om alle foto’s en reacties te herbekijken. </p> </br>
+
+    <div class="hashtag">
+        <p>#Malinwa</p>
+    </div>
+
+    <a class="logout" href="logout.php">Uitloggen</a>
+
+</main>
+
+<footer>
+
     <nav class="icon-bar">
-         <ul id="navigation">
-            <li><a href="home.php">Home</a></li>
-            <li><a href="herbeleef_fotos.php">Herbeleef</a></li>
-            <li><a href="create.php">Create</a></li>
-            <li><a href="challenge.php">Challenge</a></li>
-            <li><a href="profile_instellingen.php">Profiel</a></li>
+        <ul id="navigation">
+            <li><a class="icon_home" href="home.php">Home</a></li>
+            <li><a class="icon_herbeleef" href="herbeleef_fotos.php">Herbeleef</a></li>
+            <li><a class="icon_create" href="create.php">Create</a></li>
+            <li><a class="icon_challenge" href="challenge.php">Challenge</a></li>
+            <li><a class="icon_profile" href="profile_instellingen.php">Profiel</a></li>
         </ul>
     </nav>
 
 
+    <div class="icon_1">
+        <a href="#" ></a>
+    </div>
 
-<main>
-    <h1>Welkom, </br> <?php echo $_SESSION['Gebruikersnaam']?></h1>
-    <p>Post alvast je foto's en reacties met de hashtag van deze match:</p>
-    <p>#Malinwa</p>
 
-    <a href="logout.php">Uitloggen</a>
-
-</main>
+</footer>
 
 </body>
 </html>

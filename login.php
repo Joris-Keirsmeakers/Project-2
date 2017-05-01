@@ -54,32 +54,31 @@ if (!empty($_POST)) {
 </head>
 <body>
 
+<div class="topheader">
+    <a href="index.php"><img src="img/icon_arrow.svg" alt="#"></a>
+    <h1>Inloggen</h1>
+</div>
+
     <?php if (isset($error)):?>
         <div class="error">
             <?php echo $error; ?>
         </div>
     <?php endif; ?>
 
-<div class="topheader">
-    <a href="index.php"><img src="img/icon_arrow.svg" alt="#"></a>
-    <h1>Inloggen</h1>
-</div>
-
-<form action="" method="post" id="login">
+<form action="" method="post" id="login"/>
 
         <fieldset>
-            <label for="email">Gebruikersnaam</label>
-            <input name="name" id="name" type="name" placeholder="geef hier je gebruikersnaam in" />
+            <label>Gebruikersnaam</label>
+            <input id="username" name="username" type="text" placeholder="Geef hier je gebruikersnaam in"/>
         </fieldset>
 
         <fieldset>
-            <label for="password">Paswoord</label>
-            <input name="paswoord" id="paswoord" type="paswoord" placeholder="geef hier je paswoord in"/>
+            <label>Paswoord</label>
+            <input id="password" name="password" type="password" placeholder="Geef hier je paswoord in"/>
         </fieldset>
 
         <fieldset class="stayloggin">
-            <input id="checkbox" type="checkbox" name="inloggen" value="ingelogd">
-            <label class="stayLoggedin">Blijf ingelogd</label>
+            <input type="checkbox" name="stayloggedin" value="ingelogd">Blijf ingelogd
         </fieldset>
 
 
@@ -88,9 +87,11 @@ if (!empty($_POST)) {
         <fieldset>
             <button class="button" type="submit">Inloggen</button>
         </fieldset>
+
+        <p class="noAccount">Nog geen account? <a href="registration.php">Registreer</a></p>
+
 </form>
 
-    <p class="noAccount">Nog geen account? <a href="registration.php">Registreer</a></p>
 
 
 </body>

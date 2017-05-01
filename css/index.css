@@ -1,5 +1,9 @@
-body{
-    background-color: black;
+html{
+    background: url('../img/background_splash_.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
 
 }
 
@@ -9,7 +13,8 @@ body{
 }
 
 .logo img{
-    width: 100px;
+    width: 120px;
+    height: 120px;
     border: 1px solid white;
 }
 
@@ -29,7 +34,7 @@ h2{
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    width: 250px;
+    width: 280px;
     border-radius: 30px;
     padding: 15px 5px;
 }
@@ -38,7 +43,7 @@ h2{
 .login a, .registration a{
     text-decoration: none;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -50,7 +55,9 @@ h2{
 }
 
 .login a{
-    color: #de1641;
+    color: #C7133A;
+    font-weight: 700;
+
     background-color: white;
 }
 
@@ -62,4 +69,6 @@ h2{
 
 .registration a{
     color: white;
+    font-weight: 700;
+
 }

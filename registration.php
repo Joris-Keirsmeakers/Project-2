@@ -73,9 +73,10 @@ if (!empty($_POST)) {
 </head>
 <body>
 
-<header>
+<div class="topheader_registration">
+    <a href="index.php"><img src="img/icon_arrow.svg" alt="#"></a>
     <h1>Account aanmaken</h1>
-</header>
+</div>
 
     <div>
         <?php if (isset($error)):?>
@@ -84,7 +85,7 @@ if (!empty($_POST)) {
             </div>
         <?php endif; ?>
     </div>
-    <form method="post" action="" id="login"/>
+    <form method="post" action="" id="registration"/>
 
     <fieldset>
         <label>Gebruikersnaam</label>
@@ -106,8 +107,8 @@ if (!empty($_POST)) {
         <input id="password" name="password" type="password" placeholder="Bevestig hier je paswoord"/>
     </fieldset>
 
-    <fieldset>
-        <label>In welk vak bevindt u zich? <span>optioneel</span></label>
+    <fieldset id="vak">
+        <label>In welk vak bevindt u zich? <span><i>optioneel</i></span></label>
         <select>
             <option value="vak1">Vak 1</option>
             <option value="vak2">Vak 2</option>
@@ -117,12 +118,9 @@ if (!empty($_POST)) {
     </fieldset>
 
     <fieldset>
-        <button class="button" type="submit">Account aanmaken</button>
+        <button class="button_registratie" type="submit">Account aanmaken</button>
     </fieldset>
 
     </form>
-</section>
-
-
 </body>
 </html>
