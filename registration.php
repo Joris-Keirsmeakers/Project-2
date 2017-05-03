@@ -1,4 +1,5 @@
 <?php
+//vervangt includes, deze functie moet slechts 1 keer geschreven worden
 spl_autoload_register(function ($class) {
     include_once("classes/".$class.".php");
 });
@@ -13,43 +14,46 @@ if (!empty($_POST)) {
 
         $res = "succes";
         $MinimumLength = 6;
-        $email = $user->Email = $_POST['Email'];
+        $email = $user->Mail = $_POST['email'];
 
-        // lege velden en nakijken correct email adress
-        if (empty($user->Gebruikersnaam = $_POST["Gebruikersnaam"])) {
-            $error = "Gebruikersnaam kan niet leeg zijn";
-        } elseif (empty($Email)) {
-            $error = "Email kan niet leeg zijn";
-        } elseif (substr_count($Email, "@") < 1 || substr_count(substr($Email, strpos($Email, "@")), ".") < 1) {
-            $error = "email adres is niet geldig";
-        } elseif (empty($user->Paswoord = $_POST['Paswoord'])) {
-            $error = "Paswoord kan niet leeg zijn";
-        } elseif (strlen($user->Paswoord) < $MinimumLength) {
-            $error = "Paswoord moet minstens 6 tekens lang zijn ";
+        if (empty($user->Username = $_POST["username"])) {
+            $error = "Veld gebruikersnaam mag niet leeg zijn";
+        } elseif (empty($email)) {
+            $error = "Veld email mag niet leeg zijn";
+        } elseif (substr_count($email, "@") < 1 || substr_count(substr($email, strpos($email, "@")), ".") < 1) {
+            $error = "hallo";
+        } elseif (empty($user->Password = $_POST['password'])) {
+            $error = "Veld wachtwoord mag niet leeg zijn";
+        } elseif (strlen($user->Password) < $MinimumLength) {
+            $error = "Wachtwoord moet minstens 6 karakters lang zijn";
         }
 
-        $user->Gebruikersnaam = $_POST["Gebruikersnaam"];
-        $user->Email = $_POST["Email"];
-        $user->Paswoord = password_hash($_POST["Paswoord"], PASSWORD_DEFAULT, $options);
+        $user->Username = $_POST["username"];
+        $user->Mail = $_POST["email"];
+        $user->Password = password_hash($_POST["password"], PASSWORD_DEFAULT, $options);
 
         $conn= Db::getInstance();
 
         if (!isset($error)) {
-            $statement = $conn->prepare("SELECT * FROM Users WHERE Email = :Email");
-            $statement->bindValue(":Email", $user->EMail);
+            $statement = $conn->prepare("SELECT * FROM users WHERE Mail = :mail");
+            $statement->bindValue(":mail", $user->Mail);
 
             if ($statement->execute() && $statement->rowCount() != 0) {
                 $resultaat = $statement->fetch(PDO::FETCH_ASSOC);
-                $error = "Email adres is al in gebruik";
+                $error = "Mail is al in gebruik";
                 $res = false;
             } else {
                 if ($res != false) {
+                    // OK
+                    $succes = "Welcome, you are registered";
                     $user->Save();
                     header("location:home.php");
                     session_start();
 
+                    $_SESSION['email'] = $user->Mail;
+                    $_SESSION['username'] = $user->Username;
                 } else {
-                    $fail = "Oops, probeer opnieuw";
+                    $fail = "Oops, something went wrong! Try again!";
                     header("location:registration.php");
                 }
             }
@@ -70,6 +74,14 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/login.css">
 
+    <style>
+        .error{
+            color:white;
+            margin-left: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
 
@@ -85,42 +97,40 @@ if (!empty($_POST)) {
             </div>
         <?php endif; ?>
     </div>
-    <form method="post" action="" id="registration"/>
 
-    <fieldset>
-        <label>Gebruikersnaam</label>
-        <input id="username" name="username" type="text" placeholder="Geef hier je gebruikersnaam in"/>
-    </fieldset>
+<form method="post" name="loggin" action="#" id="registration"/>
 
-    <fieldset>
-        <label>Email</label>
-        <input id="email" name="email" type="text" placeholder="Geef hier je email in"/>
-    </fieldset>
+<fieldset>
+    <label>Gebruikersnaam</label>
+    <input id="username" name="username" type="text" placeholder="Geef gebruikersnaam in"/>
+</fieldset>
 
-    <fieldset>
-        <label>Paswoord</label>
-        <input id="password" name="password" type="password" placeholder="Geef hier je paswoord in"/>
-    </fieldset>
+<fieldset>
+    <label>Email</label>
+    <input id="email" name="email" type="text" placeholder="Geef emailadres in"/>
+</fieldset>
 
-    <fieldset>
-        <label>Bevestig paswoord</label>
-        <input id="password" name="password" type="password" placeholder="Bevestig hier je paswoord"/>
-    </fieldset>
+<fieldset>
+    <label>Password</label>
+    <input id="password" name="password" type="password" placeholder="Geef paswoord in"/>
+</fieldset>
 
-    <fieldset id="vak">
-        <label>In welk vak bevindt u zich? <span><i>optioneel</i></span></label>
-        <select>
-            <option value="vak1">Vak 1</option>
-            <option value="vak2">Vak 2</option>
-            <option value="vak3">Vak 3</option>
-            <option value="vak4">Vak 4</option>
-        </select>
-    </fieldset>
+<fieldset id="vak">
+    <label>In welk vak bevindt u zich? <span><i>optioneel</i></span></label>
+    <select>
+        <option value="vak1">Vak 1</option>
+        <option value="vak2">Vak 2</option>
+        <option value="vak3">Vak 3</option>
+        <option value="vak4">Vak 4</option>
+    </select>
+</fieldset>
 
-    <fieldset>
-        <button class="button_registratie" type="submit">Account aanmaken</button>
-    </fieldset>
+<fieldset>
+    <button class="button_registratie" name='submit' type="submit">Account aanmaken</button>
+</fieldset>
 
-    </form>
+</form>
+
+
 </body>
 </html>
