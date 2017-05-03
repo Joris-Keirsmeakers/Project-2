@@ -1,5 +1,4 @@
 <?php
-//vervangt includes, deze functie moet slechts 1 keer geschreven worden
 spl_autoload_register(function ($class) {
     include_once("classes/".$class.".php");
 });
@@ -21,7 +20,7 @@ if (!empty($_POST)) {
         } elseif (empty($email)) {
             $error = "Veld email mag niet leeg zijn";
         } elseif (substr_count($email, "@") < 1 || substr_count(substr($email, strpos($email, "@")), ".") < 1) {
-            $error = "hallo";
+            $error = "oeps";
         } elseif (empty($user->Password = $_POST['password'])) {
             $error = "Veld wachtwoord mag niet leeg zijn";
         } elseif (strlen($user->Password) < $MinimumLength) {
@@ -44,8 +43,7 @@ if (!empty($_POST)) {
                 $res = false;
             } else {
                 if ($res != false) {
-                    // OK
-                    $succes = "Welcome, you are registered";
+                    $succes = "Welkom, je bent geregistreerd";
                     $user->Save();
                     header("location:home.php");
                     session_start();
@@ -53,7 +51,7 @@ if (!empty($_POST)) {
                     $_SESSION['email'] = $user->Mail;
                     $_SESSION['username'] = $user->Username;
                 } else {
-                    $fail = "Oops, something went wrong! Try again!";
+                    $fail = "Oops, er is iets misgelopen! Probeer opnieuw!";
                     header("location:registration.php");
                 }
             }

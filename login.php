@@ -8,25 +8,24 @@ if (!empty($_POST)) {
     try {
         $user = new User();
 
-        if (empty($user->Mail = $_POST['email'])) {
-            $error = "Veld email mag niet leeg zijn";
+        if (empty($user->Username = $_POST['username'])) {
+            $error = "Gebruikersnaam moet ingevuld zijn";
         } elseif (empty($user->Password = $_POST['password'])) {
-            $error = "Veld wachtwoord mag niet leeg zijn";
+            $error = "Paswoord moet ingevuld zijn";
         }
 
         if (!isset($error)) {
 
             $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT * FROM users WHERE Mail = :mail");
-            $statement->bindValue(":mail", $user->Mail);
+            $statement = $conn->prepare("SELECT * FROM Users WHERE Username = :username");
+            $statement->bindValue(":username", $user->Username);
 
             if ($statement->execute() && $statement->rowCount() != 0) {
                 $res = $statement->fetch(PDO::FETCH_ASSOC);
 
-                if (password_verify($user->Password, $res['Password'])) {
+                if (password_verify($user->Password, $res['password'])) {
                     session_start();
 
-                    $_SESSION['email'] = $user->Mail;
                     $_SESSION['username'] = $res['Username'];
 
                     header('location:home.php');
@@ -79,8 +78,8 @@ if (!empty($_POST)) {
 <form action="" method="post" id="login">
 
     <fieldset>
-        <label for="email">Email</label>
-        <input name="email" id="email" type="text" placeholder="Geef hier je emailadres in" />
+        <label for="username">Gebruikersnaam</label>
+        <input name="username" id="username" type="text" placeholder="Geef hier je gebruikersnaam in" />
     </fieldset>
 
     <fieldset>
@@ -88,11 +87,11 @@ if (!empty($_POST)) {
         <input name="password" id="password" type="password" placeholder="Geef hier je paswoord in"/>
     </fieldset>
 
-    <fieldset class="stayloggin">
+    <fieldset id="stayloggin">
         <input type="checkbox" name="stayloggedin" value="ingelogd">Blijf ingelogd
+        <a class="forgetPassword" href="#">Paswoord vergeten</a>
     </fieldset>
 
-    <a class="forgetPassword" href="#">Paswoord vergeten</a>
 
     <fieldset>
         <button class="button" type="submit">Inloggen</button>

@@ -44,19 +44,15 @@ class User
 
     public function Save()
     {
-        //connectie maken (PDO) -> geen mysqli, PDO kan voor meerder data banken
         $conn= Db::getInstance();
 
-        //query schrijven
         $statement = $conn->prepare("INSERT INTO Users (Username,Mail,Password) VALUES (:Username,:Mail,:Password)");
         $statement->bindValue(":Username", $this->m_sUsername);
         $statement->bindValue(":Mail", $this->m_sMail);
         $statement->bindValue(":Password", $this->m_sPassword);
 
-        //query executen
         $res = $statement->execute();
 
-        //true or false?
         return ($res);
     }
 
