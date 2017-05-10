@@ -15,11 +15,10 @@
 <div class="container">
 
     <div class="logo">
-        <img src="#" alt="logo"/>
+        <img src="img/logo_index.png" alt="logo"/>
     </div>
 
-    <h1>NAAM PRODUCT</h1>
-    <h2>Hier komt nog wat tekst</h2>
+    <h2>Hier komt nog de baseline</h2>
 
     <div id="buttons">
         <div class="registration">

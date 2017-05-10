@@ -9,23 +9,25 @@ html{
 
 .logo{
     text-align: center;
-    margin: 50px 0px;
+    margin-top: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 5px;
 }
 
 .logo img{
-    width: 120px;
-    height: 120px;
-    border: 1px solid white;
-}
-
-h1,h2{
-    color:white;
-    text-align: center;
+    width: 250px;
+    height: 250px;
 }
 
 h2{
     margin-bottom: 50px;
     font-weight: 400;
+    font-size: 12px;
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 

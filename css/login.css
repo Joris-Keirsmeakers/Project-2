@@ -57,7 +57,7 @@ fieldset{
 
 }
 
-#login input, #registration input{
+#login input#username, #login input#password, #registration input{
     border: 0;
     outline: 0;
     background: transparent;
@@ -71,20 +71,12 @@ fieldset{
     font-family: 'Open Sans', sans-serif;
 }
 
-#stayloggin input{
-    display: inline-block;
-}
-
-
-
-
-
 
 #registration input{
     margin: 12px 0px;
 }
 
-#login input::placeholder, #registration input::placeholder {
+#login input::-webkit-input-placeholder, #registration input::-webkit-input-placeholder{
     color: white;
     font-weight: 400;
     font-size: 14px;
@@ -95,7 +87,7 @@ fieldset{
 
 .forgetPassword {
     text-decoration: none;
-    margin-left: 60px;
+    margin-left: 50px;
     text-align: right;
     font-size: 13px;
     color: #850D27;
@@ -109,7 +101,13 @@ fieldset{
     color: #850D27;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    margin-bottom: 10px;
 
+}
+
+#stayloggin input{
+    margin-right: 5px;
 }
 
 .noAccount{
@@ -141,6 +139,7 @@ fieldset{
     width: 280px;
     border-radius: 30px;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
 
 }
 

@@ -6,35 +6,37 @@ spl_autoload_register(function ($class) {
 
 if (!empty($_POST)) {
     try {
+        // gegevens opslaan
         $user = new User();
 
-        if (empty($user->Username = $_POST['username'])) {
-            $error = "Gebruikersnaam moet ingevuld zijn";
+        // error handling voor lege velden
+        if (empty($user->Mail = $_POST['email'])) {
+            $error = "Veld 'email' mag niet leeg zijn ";
         } elseif (empty($user->Password = $_POST['password'])) {
-            $error = "Paswoord moet ingevuld zijn";
+            $error = "Veld 'wachtwoord' mag niet leeg zijn";
         }
 
+        // enkel code doen indien alle velden ingevuld zijn
         if (!isset($error)) {
 
-            $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT * FROM Users WHERE Username = :username");
-            $statement->bindValue(":username", $user->Username);
+            if ($user->checkPassword()){
 
-            if ($statement->execute() && $statement->rowCount() != 0) {
-                $res = $statement->fetch(PDO::FETCH_ASSOC);
+                $res = User::getUser($user->Mail);
 
-                if (password_verify($user->Password, $res['password'])) {
-                    session_start();
+                session_start();
 
-                    $_SESSION['username'] = $res['Username'];
+                // we maken session vars aan voor later
+                $_SESSION['email'] = $user->Mail;
+                $_SESSION['username'] = $res['Username'];
+                $_SESSION['fullname'] = $res['Fullname'];
 
-                    header('location:home.php');
-                } else {
-                    $error = 'Wachtwoord komt niet overeen. Probeer opnieuw.';
-                }
+                // we sturen de user door
+                header('location:home.php');
             } else {
-                $error = "Gebruik bestaat niet in. Maak eerst een account aan." . "</br>" . "<a href='registration.php'>Account aanmaken</a>";
+                $error = 'Wachtwoord komt niet overeen. Probeer opnieuw';
             }
+        } else {
+            $error = "Gebruiker bestaat niet, gelieve eerst een account aan te maken." . "</br>" . "<a href='registration.php'>Account aanmaken</a>";
         }
     } catch (PDOException $e) {
         $error = $e->getMessage();

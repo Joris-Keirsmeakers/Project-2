@@ -4,6 +4,7 @@ class User
     private $m_sUsername;
     private $m_sMail;
     private $m_sPassword;
+    private $m_sVak;
 
     public function __set($p_sProperty, $p_vValue)
     {
@@ -19,6 +20,10 @@ class User
 
             case "Password":
                 $this->m_sPassword  = $p_vValue;
+                break;
+
+            case "Vak":
+                $this->m_sVak  = $p_vValue;
                 break;
         }
     }
@@ -39,29 +44,32 @@ class User
                 return $this->m_sPassword;
                 break;
 
+            case "Vak":
+                return $this->m_sVak;
+                break;
+
         }
     }
 
     public function Save()
     {
+        //connectie maken (PDO) -> geen mysqli, PDO kan voor meerder data banken
         $conn= Db::getInstance();
 
-        $statement = $conn->prepare("INSERT INTO Users (Username,Mail,Password) VALUES (:Username,:Mail,:Password)");
-        $statement->bindValue(":Username", $this->m_sUsername);
-        $statement->bindValue(":Mail", $this->m_sMail);
-        $statement->bindValue(":Password", $this->m_sPassword);
+                //query schrijven
+                $statement = $conn->prepare("INSERT INTO Users (Username,Mail,Password,Vak) VALUES (:username,:mail,:password,:vak)");
+                $statement->bindValue(":username", $this->m_sUsername);
+                $statement->bindValue(":mail", $this->m_sMail);
+                $statement->bindValue(":password", $this->m_sPassword);
+                $statement->bindValue(":vak", $this->m_sVak);
 
-        $res = $statement->execute();
 
-        return ($res);
-    }
+                //query execute
+                $res = $statement->execute();
 
-    public function __toString()
-    {
-        $output = "<p>". $this->m_sUsername."</p>";
-        $output .= "<p>".$this->m_sMail."</p>";
+                //true or false?
+                return ($res);
 
-        return ($output);
     }
 
     public static function getUsers()
@@ -71,6 +79,37 @@ class User
         $stmt->execute();
 
         return ($stmt->fetchAll(PDO::FETCH_ASSOC));
+    }
+
+
+    public static function getUser($email)
+    {
+        $conn= Db::getInstance();
+        $stmt = $conn->prepare("SELECT * FROM Users WHERE Mail = :email");
+        $stmt->bindValue(':email', $email);
+        $stmt->execute();
+
+        return ($stmt->fetch(PDO::FETCH_ASSOC));
+    }
+
+    public function checkPassword(){
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("SELECT * FROM users WHERE Mail = :mail");
+        $statement->bindValue(":mail", $this->Mail);
+
+        if($statement->execute() && $statement->rowCount() != 0){
+            $res = $statement->fetch(PDO::FETCH_ASSOC);
+
+            // hier gaan we het opgeslagen wachtwoord vergelijken met het ingegeven wachtwoord
+            if (password_verify($this->Password, $res['Password'])){
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
+            return false;
+        }
     }
 
 

@@ -20,7 +20,7 @@ if (!empty($_POST)) {
         } elseif (empty($email)) {
             $error = "Veld email mag niet leeg zijn";
         } elseif (substr_count($email, "@") < 1 || substr_count(substr($email, strpos($email, "@")), ".") < 1) {
-            $error = "oeps";
+            $error = "";
         } elseif (empty($user->Password = $_POST['password'])) {
             $error = "Veld wachtwoord mag niet leeg zijn";
         } elseif (strlen($user->Password) < $MinimumLength) {
@@ -50,6 +50,7 @@ if (!empty($_POST)) {
 
                     $_SESSION['email'] = $user->Mail;
                     $_SESSION['username'] = $user->Username;
+                    $_SESSION['password'] = $user->Password;
                 } else {
                     $fail = "Oops, er is iets misgelopen! Probeer opnieuw!";
                     header("location:registration.php");
