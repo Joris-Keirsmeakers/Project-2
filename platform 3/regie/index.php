@@ -11,8 +11,7 @@
 
 <section id="left">
     <div class="logo">
-        <a href="index.php"><img src="../img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="index.php"><img src="../img/logo_index2.png"/></a>
     </div>
 
     <form action="" method="post" id="login">

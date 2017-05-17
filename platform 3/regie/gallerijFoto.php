@@ -17,8 +17,7 @@
 
 <section id="left">
     <div class="logo">
-        <a href="home.php"><img src="../img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="home.php"><img src="../img/logo_index2.png"/></a>
     </div>
 
     <div id="menu-overlay"></div>

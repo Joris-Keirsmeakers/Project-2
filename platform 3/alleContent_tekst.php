@@ -23,10 +23,12 @@ spl_autoload_register(function ($class) {
 </head>
 <body>
 
-<section id="left">
+<section class="container">
+    <div class="column left-half">
+
+        <article>
     <div class="logo">
-        <a href="home.php"><img src="img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="home.php"><img src="img/logo_index2.png"/></a>
     </div>
 
     <div id="menu-overlay"></div>
@@ -62,9 +64,11 @@ spl_autoload_register(function ($class) {
             </ul>
         </div>
     </div>
+        </article>
+    </div>
 
-</section>
-<section id="right">
+    <div class="column right-half">
+        <article>
 
     <h1>Alle content</h1>
     <ul class="breadcrumb">
@@ -80,6 +84,8 @@ spl_autoload_register(function ($class) {
             <a href="albumAlle_tekst.php"><img src="img/background_home.jpg" alt="#"></a>
             <p>Album 1</p>
         </div>
+    </div>
+    </article>
 
 
     </div>

@@ -25,11 +25,15 @@
 </head>
 <body>
 
-<section id="left">
+<section class="container">
+    <div class="column left-half">
+
+<article>
     <div class="logo">
-        <a href="home.php"><img src="img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="home.php"><img src="img/logo_index2.png"/></a>
     </div>
+
+
 
 
     <div id="menu-overlay"></div>
@@ -66,13 +70,16 @@
             </ul>
         </div>
     </div>
+</article>
+    </div>
 
 
-</section>
-<section id="right">
-
-    <h3>Bekijk alle foto's van de voorbije match</h3>
+    <div class="column right-half_home">
+<article>
+    <h3>Wil je de vorige match herbeleven? </br>Neem dan zeker eens eens een kijkje naar alle foto's</h3>
     <a class="btn_gallerij" href="gallerijFoto.php">Bekijk</a>
+</article>
+</div>
 
 </section>
 </body>

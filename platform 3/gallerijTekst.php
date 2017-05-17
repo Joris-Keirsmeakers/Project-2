@@ -15,10 +15,12 @@
 </head>
 <body>
 
-<section id="left">
+<section class="container">
+    <div class="column left-half">
+
+        <article>
     <div class="logo">
-        <a href="index.php"><img src="img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="index.php"><img src="img/logo_index2.png"/></a>
     </div>
 
     <div id="menu-overlay"></div>
@@ -54,9 +56,12 @@
             </ul>
         </div>
     </div>
+        </article>
+    </div>
 
-</section>
-<section id="right">
+
+<div class="column right-half">
+    <article>
 
     <div class="eigen">
         <h1>Eigen creaties</h1>
@@ -67,7 +72,8 @@
         <h1>Alle content</h1>
         <a href="alleContent_tekst.php">Bekijk</a>
     </div>
-
+    </article>
+</div>
 </section>
 </body>
 </html>

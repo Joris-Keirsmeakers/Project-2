@@ -37,10 +37,12 @@ if ($res =User::getUser($user->Username)) {
 </head>
 <body>
 
-<section id="left">
+<section class="container">
+    <div class="column left-half">
+
+        <article>
     <div class="logo">
-        <a href="home.php"><img src="img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="home.php"><img src="img/logo_index2.png"/></a>
     </div>
 
     <div id="menu-overlay"></div>
@@ -76,9 +78,12 @@ if ($res =User::getUser($user->Username)) {
             </ul>
         </div>
     </div>
+        </article>
+    </div>
 
-</section>
-<section id="right">
+
+    <div class="column right-half">
+        <article>
 
     <h1>Profielinstellingen</h1>
     <ul class="breadcrumb">
@@ -132,6 +137,8 @@ if ($res =User::getUser($user->Username)) {
     <div id="delete_account">
         <h2>Verwijder account</h2>
         <button class="btn_delete" type="submit">Verwijder definitief</button>
+    </div>
+        </article>
     </div>
 
 </section>

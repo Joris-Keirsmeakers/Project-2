@@ -13,7 +13,7 @@ spl_autoload_register(function ($class) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evoke - profiel</title>
     <link rel="stylesheet" href="css/default.css" />
-    <link rel="stylesheet" href="css/profile.css"/>
+    <link rel="stylesheet" href="css/content.css" />
 
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -23,10 +23,12 @@ spl_autoload_register(function ($class) {
 </head>
 <body>
 
-<section id="left">
+<section class="container">
+    <div class="column left-half">
+
+        <article>
     <div class="logo">
-        <a href="home.php"><img src="img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="home.php"><img src="img/logo_index2.png"/></a>
     </div>
 
     <div id="menu-overlay"></div>
@@ -62,9 +64,12 @@ spl_autoload_register(function ($class) {
             </ul>
         </div>
     </div>
+        </article>
+    </div>
 
-</section>
-<section id="right">
+
+    <div class="column right-half">
+        <article>
 
     <h1>Eigen creaties</h1>
     <ul class="breadcrumb">
@@ -74,15 +79,59 @@ spl_autoload_register(function ($class) {
         <li class="huidig">Eigen creaties</li>
     </ul>
 
-    <div id="album_gallery">
-        <!-- HIER PHP foreach -->
+    <div class="album_gallery">
+
         <div class="album_item">
             <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
             <p>Album 1</p>
         </div>
 
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
+
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
+
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
+
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
+
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
+
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
+        <div class="album_item">
+            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+            <p>Album 1</p>
+        </div>
 
     </div>
+        </article>
+    </div>
+
 
 </section>
 </body>

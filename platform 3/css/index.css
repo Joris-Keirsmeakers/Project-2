@@ -103,7 +103,7 @@ fieldset{
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
     width: 90%;
@@ -168,32 +168,91 @@ form p{
     padding: 2px;
 }
 
-#right{
-    background: url("../img/background_index2.jpg") center ;
-    background-size: cover;
-    height: 740px;
-    top: 0;
-    bottom: 0;
+@media (min-width: 1025px) and (max-width: 1280px) {
+    form {
+        width: 70%;
+        height: 90%;
+
+    }
+
+
+    #stayloggin .forgetPassword{
+        display: block;
+        float:left;
+        text-align: center;
+
+    }
+
+    #stayloggin {
+        text-align: center;
+
+    }
+
+    #stayloggin input{
+        margin-right: 5px;
+    }
 }
 
-#right h1{
-    margin-left: 950px;
-    margin-top: 600px;
-    position: absolute;
-    color:white;
-    font-size: 40px;
-    text-transform: uppercase;
+@media (min-width: 768px) and (max-width: 1100px) {
+
+    .left-half_index{
+        flex: 0.5;
+    }
+
+    .right-half_index{
+        flex: 1;
+    }
+
+    form{
+        width: 95%;
+        margin-left: 20px;
+        margin-right: 20px;
+
+
+    }
+
+    .right-half_index h4{
+        color:white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .right-half_index h1{
+        color:white;
+        font-size: 36px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #stayloggin .forgetPassword{
+        display: block;
+        float:left;
+        text-align: center;
+
+    }
+
+    #stayloggin {
+        text-align: center;
+
+    }
+
+    #stayloggin input{
+        margin-right: 5px;
+    }
+
+
+
+
+
+
 }
 
-#right h4{
-    margin-left: 950px;
-    margin-top: 650px;
-    position: absolute;
-    color:white;
-    font-size: 19px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
+
+
 
 
 
