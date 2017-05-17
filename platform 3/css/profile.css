@@ -1,0 +1,166 @@
+#right{
+    margin-left: 480px;
+}
+
+h1{
+   color:#C7133A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+h2{
+    color:#C7133A;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+fieldset{
+    border:none;
+    margin-bottom: 20px;
+}
+
+hr{
+    margin-right: 100px;
+    margin-bottom: 30px;
+    border: 0.5px solid #c8c7c7;
+}
+
+
+label, input {
+    display: inline-block;
+    vertical-align: baseline;
+    width: 250px;
+}
+
+label {
+    color: #2D2D2D;
+    font-size: 15px;
+}
+
+form, input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+}
+
+form label{
+    color: #464646;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+input[type=text], input[type=password]{
+    font-size: 12px;
+    color:#c8c7c7;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+#change_password input{
+    border-radius: 20px;
+    border: 1px solid #c8c7c7;
+    padding: 8px;
+}
+
+
+#change_profile{
+    margin-top: 40px;
+}
+
+#change_profile input{
+    border:none;
+}
+
+.btn_right {
+    float:right;
+    margin-right: 100px;
+    background-color: #C7133A;
+    padding: 10px;
+    border:none;
+    color: white;
+    font-weight: 400;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 20px;
+
+}
+
+.btn_right:hover{
+    background-color:#611925;
+}
+
+.btn_delete{
+    background-color: #F6D180;
+    border:2px solid #F6D180;
+    border:none;
+    color: white;
+    font-size: 12px;
+    padding: 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* GEPOSTE MEDIA */
+
+#right h1{
+    margin-top: 30px;
+}
+
+#right p{
+    color:black;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#right .filter{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+#right .filter li {
+    display: inline-block;
+}
+
+#right .filter li a{
+    text-decoration: none;
+    color:#c8c7c7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 40px;
+
+}
+
+
+#image_gallery{
+    column-count: 4;
+    width: 900px;
+}
+
+.item {
+    display: inline-block;
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+.item img{
+    width: 200px;
+}
+
+
+
+

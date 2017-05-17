@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    overflow:auto;
+    height: 100%;
+    min-height: 100%;
+}
+
+form{
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+fieldset{
+    border:none;
+    padding-bottom: 25px;
+}
+
+#registration fieldset{
+    padding-bottom: 20px;
+}
+
+#login label, #registration label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    letter-spacing:2px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+#login input, #registration input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid #F6D180;
+    width: 90%;
+    margin: 12px 0px;
+    font-size: 14px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #F6D180;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+#stayloggin{
+    width: 90%;
+    display: block;
+    font-size: 12px;
+    color: #F6D180;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 0px;
+    margin-top: -20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#stayloggin input{
+    width: 5%;
+}
+
+
+.forgetPassword {
+    text-decoration: none;
+    margin-left: 20%;
+    text-align: right;
+    font-size: 12px;
+    color: #F6D180;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+#registration input{
+    margin: 10px 0px;
+}
+
+#login input::placeholder, #registration input::placeholder {
+    color: #F6D180;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.button, .button_account{
+    background-color: #F6D180;
+    border: none;
+    color: white;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 90%;
+    border-radius: 30px;
+    margin-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button_account{
+    margin-top: 5px;
+}
+
+.button:hover, .button_account:hover{
+    color: #C7133A;
+    font-weight: 700;
+    background-color: white
+}
+
+form p{
+    display: block;
+    text-align: center;
+    margin-left: -40px;
+    font-size: 12px;
+    color: #F6D180;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.noAccount a{
+    color: white;
+    font-weight: 600;
+
+}
+
+.supporterLogin{
+    display: block;
+    text-align: center;
+    margin-left: -40px;
+    font-size: 12px;
+    color: #F6D180;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+#vak label span{
+    font-size: 8px;
+}
+
+#vak label{
+    margin-bottom: 10px;
+}
+
+#vak select{
+    border: 1px solid #F6D180;
+    background: none;
+    border-radius: 5px;
+    width: 100px;
+    color: #F6D180;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 2px;
+}
+
+#right{
+    background: url("../img/background_index2.jpg") center ;
+    background-size: cover;
+    height: 740px;
+    top: 0;
+    bottom: 0;
+}
+
+#right h1{
+    margin-left: 950px;
+    margin-top: 600px;
+    position: absolute;
+    color:white;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#right h4{
+    margin-left: 950px;
+    margin-top: 650px;
+    position: absolute;
+    color:white;
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+
