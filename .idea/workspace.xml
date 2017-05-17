@@ -2,6 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4edb8b79-6610-4606-b682-98b5f2af2422" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/album.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/challenge.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/Db.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/PostFoto.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/User.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codeSnippets/emotie-ding/analyse.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codeSnippets/emotie-ding/test.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codeSnippets/emotie-ding/test2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/album.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/challenge.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/default.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/herbeleef.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/home.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/profile.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/herbeleef_fotos.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/herbeleef_tekst.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/home.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background_challenge.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background_home.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background_splash.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background_splash_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/challenge.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/challenge_active.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/create.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/herbeleef.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/herbeleef_Active.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/home.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/home_active.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo_index.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile_active.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profile_gepost.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profile_instellingen.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/registration.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/splash.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,48 +151,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project-2 - platform 1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project-2 - platform 1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project-2 - platform 1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project-2 - platform 1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project-2 - platform 1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project-2 - platform 1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project-2 - platform 1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,7 +371,7 @@
       <workItem from="1494750404551" duration="3396000" />
       <workItem from="1494760654368" duration="651000" />
       <workItem from="1494952461241" duration="1416000" />
-      <workItem from="1495010005949" duration="242000" />
+      <workItem from="1495010005949" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="files">
       <created>1493459997057</created>
@@ -415,11 +415,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495010419721</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1495010461769</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1495010461769</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60896000" />
+    <option name="totallyTimeSpent" value="60953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1217" height="776" extended-state="0" />
@@ -788,11 +795,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <marker date="1495010057000" expanded="true" signature="1269:1322" ph="SELECT usern... users" />
-            <marker date="1495010057000" expanded="true" signature="1837:1914" ph="INSERT INTO users... " />
-            <marker date="1495010057000" expanded="true" signature="2441:2460" ph="SELECT * FRO... users" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
