@@ -10,10 +10,10 @@ if (!empty($_POST)) {
         $user = new User();
 
         // error handling voor lege velden
-        if (empty($user->Mail = $_POST['email'])) {
-            $error = "Veld 'email' mag niet leeg zijn ";
+        if (empty($user->Username = $_POST['username'])) {
+            $error = "Field 'email' can not be empty.";
         } elseif (empty($user->Password = $_POST['password'])) {
-            $error = "Veld 'wachtwoord' mag niet leeg zijn";
+            $error = "Field 'password' can not be empty.";
         }
 
         // enkel code doen indien alle velden ingevuld zijn
@@ -21,22 +21,21 @@ if (!empty($_POST)) {
 
             if ($user->checkPassword()){
 
-                $res = User::getUser($user->Mail);
+                $res = User::getUser($user->Username);
 
                 session_start();
 
                 // we maken session vars aan voor later
-                $_SESSION['email'] = $user->Mail;
+                $_SESSION['username'] = $user->Username;
                 $_SESSION['username'] = $res['Username'];
-                $_SESSION['fullname'] = $res['Fullname'];
 
                 // we sturen de user door
                 header('location:home.php');
             } else {
-                $error = 'Wachtwoord komt niet overeen. Probeer opnieuw';
+                $error = 'Password does not match. Please try again.';
             }
         } else {
-            $error = "Gebruiker bestaat niet, gelieve eerst een account aan te maken." . "</br>" . "<a href='registration.php'>Account aanmaken</a>";
+            $error = "User does not exist in database. Please register first." . "</br>" . "<a href='registration.php'>Sign up here</a>";
         }
     } catch (PDOException $e) {
         $error = $e->getMessage();
