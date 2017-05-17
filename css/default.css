@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    padding: 5px 0px;
+
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    float: left;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav ul li a.icon_home{
+    display: block;
+    background: url("../img/home.svg") no-repeat;
+    text-indent: -99999px;
+    height: 10px;
+    width: 10px;
+
+}
+
+nav ul li a.icon_home:active{
+    display: block;
+    background: url("../img/home_active.svg") no-repeat;
+    text-indent: -99999px;
+    height: 10px;
+    width: 10px;
+}
+
+nav ul li a.icon_herbeleef{
+    display: block;
+    background: url("../img/herbeleef.svg") no-repeat;
+    text-indent: -99999px;
+    height: 10px;
+    width: 10px;
+
+}
+
+nav ul li a.icon_herbeleef:active{
+    display: block;
+    background: url("../img/herbeleef_Active.svg") no-repeat;
+    text-indent: -99999px;
+    height: 10px;
+    width: 10px;
+}
+
+nav ul li a.icon_challenge{
+    display: block;
+    background: url("../img/challenge.svg") no-repeat;
+    text-indent: -99999px;
+    height: 10px;
+    width: 10px;
+
+}
+
+nav ul li a.icon_challenge:active{
+    display: block;
+    background: url("../img/challenge_active.svg") no-repeat;
+    text-indent: -99999px;
+    height: 10px;
+    width: 10px;
+}
+
+nav ul li a.icon_profile{
+    display: block;
+    background: url("../img/profile.svg") no-repeat;
+    text-indent: -99999px;
+    height: 10px;
+    width: 10px;
+
+}
+
+nav ul li a.icon_profile:active{
+    display: block;
+    background: url("../img/profile_active.svg") no-repeat;
+    text-indent: -99999px;
+    height: 10px;
+    width: 10px;
+}
+
+
+
+
+
+
+.nav_first, .nav_second{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+
+
+}
+
+.nav_first{
+    background-color: #C7133A;
+    color:white;
+}
+
+.nav_second{
+    background-color: white;
+    color: #9a9a9a;
+
+}
+
+.nav{
+    width: 280px;
+    padding-top: 20px;
+    margin-left: 20px;
+
+}
+
+.nav a{
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+
+
+.filter {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.filter p{
+    color:white;
+    font-weight:600;
+    font-size: 11px;
+}
+
+.filter ul li {
+    list-style-type: none;
+    font-size: 12px;
+    float:left;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.filter ul li a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-weight:700;
+
+}
+
+.filter ul li a:visited,
+.filter ul li a:active{
+    color: #F6D180;
+    border-bottom: 2px solid #F6D180;
+    display: block;
+    font-weight:700;
+
+}
+section{
+    clear:both;
+}
+
+
+
+footer
+{
+    margin-left: -20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    background-color: #C7133A;
+
+
+}
+
+

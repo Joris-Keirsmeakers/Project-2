@@ -1,0 +1,182 @@
+html{
+    background: url('../img/background_splash_.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+.topheader a, .topheader_registration a{
+    text-decoration: none;
+    display: block;
+    width: 30px;
+    margin-left: 20px;
+
+}
+.topheader h1{
+    color:white;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.topheader_registration h1{
+    color:white;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+form{
+    margin-top: 30px;
+    display: table;
+    width: 280px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+fieldset{
+    border:none;
+}
+
+#login label, #registration label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #850D27;
+    letter-spacing:1px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+#login input, #registration input{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid #850D27;
+    width: 280px;
+    margin: 15px 0px;
+    font-size: 14px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#stayloggin input{
+    display: inline-block;
+}
+
+
+
+
+
+
+#registration input{
+    margin: 12px 0px;
+}
+
+#login input::placeholder, #registration input::placeholder {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.forgetPassword {
+    text-decoration: none;
+    margin-left: 60px;
+    text-align: right;
+    font-size: 13px;
+    color: #850D27;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+#stayloggin {
+    font-size: 13px;
+    color: #850D27;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.noAccount{
+    font-size: 13px;
+    text-align: center;
+    color: #C7133A;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+
+.noAccount a{
+    color: white;
+    font-weight: 600;
+
+}
+
+.button{
+    background-color: #C7133A;
+    border: none;
+    color: white;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 280px;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.button_registratie {
+    background-color: #C7133A;
+    border: none;
+    color: white;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 280px;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+#vak label span{
+    font-size: 8px;
+}
+
+#vak label{
+    margin: 10px 0px;
+}
+
+#vak select{
+    border: 1px solid #850D27;
+    background: none;
+    border-radius: 5px;
+    width: 100px;
+    color: #850D27;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 2px;
+}
