@@ -20,8 +20,8 @@
       <file leaf-file-name="challenge.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/platform 1/challenge.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            <state relative-caret-position="225">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -248,7 +248,7 @@
       <workItem from="1494760654368" duration="651000" />
       <workItem from="1494952461241" duration="1416000" />
       <workItem from="1495010005949" duration="299000" />
-      <workItem from="1495010838954" duration="80000" />
+      <workItem from="1495010838954" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="files">
       <created>1493459997057</created>
@@ -299,11 +299,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495010461769</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update">
+      <created>1495010931000</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1495010931000</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61033000" />
+    <option name="totallyTimeSpent" value="61286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1217" height="776" extended-state="0" />
@@ -346,7 +353,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/index.css" />
     <entry file="file://$PROJECT_DIR$/home.php" />
     <entry file="file://$PROJECT_DIR$/registration.php" />
     <entry file="file://$PROJECT_DIR$/css/login.css" />
@@ -396,10 +402,18 @@
     <entry file="file://$PROJECT_DIR$/classes/User.php" />
     <entry file="file://$PROJECT_DIR$/create.php" />
     <entry file="file://$PROJECT_DIR$/registration.php" />
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/platform 1/challenge.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        <state relative-caret-position="225">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding />
         </state>
       </provider>
