@@ -16,14 +16,19 @@
     -webkit-box-sizing: border-box;
 }
 
-.album_item:hover {
-
-}
-
 .album_item img{
-    width: 150px;
+    width: 250px;
 
 }
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 700px) {
     .album_gallery {

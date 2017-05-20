@@ -14,7 +14,6 @@ html, body, section{
 .column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .container{
@@ -41,12 +40,19 @@ html, body, section{
     background: url("../img/background_home.jpg")  no-repeat center center;
     background-size: cover;
     flex:2;
+    justify-content: center;
+
 
 }
 
 .right-half {
     flex:2;
     background-color:white;
+}
+
+.right-half_index{
+    justify-content: center;
+
 }
 
 .right-half_index article{
@@ -344,6 +350,11 @@ ul.breadcrumb li a:hover {
 
 ul.breadcrumb .huidig{
     color: #C7133A;
+}
+
+
+.title_right{
+    margin-top: 30px;
 }
 
 

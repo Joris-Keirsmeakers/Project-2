@@ -71,7 +71,7 @@ spl_autoload_register(function ($class) {
     <div class="column right-half">
         <article>
 
-    <h1>Eigen creaties</h1>
+    <h1 class="title_right">Eigen creaties</h1>
     <ul class="breadcrumb">
         <li><a href="home.php">Home</a></li>
         <li><a href="gallerij.php">Gallerij</a></li>
@@ -82,51 +82,16 @@ spl_autoload_register(function ($class) {
     <div class="album_gallery">
 
         <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
+            <div class="image">
+                <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+
+            </div>
+
+            <div class="overlay">
+                <div class="text">Album 1</div>
+            </div>
         </div>
 
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
-
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
-
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
-
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
-
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
-
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
-        <div class="album_item">
-            <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
 
     </div>
         </article>

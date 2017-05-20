@@ -14,6 +14,7 @@ spl_autoload_register(function ($class) {
     <title>Evoke - profiel</title>
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/profile.css"/>
+    <link rel="stylesheet" href="css/content.css"/>
 
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -71,28 +72,34 @@ spl_autoload_register(function ($class) {
     <div class="column right-half">
         <article>
 
-    <h1>Verzamelde media</h1>
-    <ul class="breadcrumb">
-        <li><a href="home.php">Home</a></li>
-        <li><a href="verzameldeMedia.php">Profiel</a></li>
-        <li class="huidig">Verzamelde media</li>
-    </ul>
+            <h1 class="title_right">Verzamelde media</h1>
+            <ul class="breadcrumb">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="verzameldeMedia.php">Profiel</a></li>
+                <li class="huidig">Geposte media</li>
+            </ul>
 
-    <p>Sorteren op:</p>
-    <ul class="filter">
-        <li><a href="#">Foto's</a></li>
-        <li><a href="#">Tekst</a></li>
-    </ul>
+            <p class="sort">Sorteren op:</p>
+            <ul class="filter">
+                <li><a href="#">Foto's</a></li>
+                <li><a href="#">Tekst</a></li>
+            </ul>
+
+            <div class="album_gallery">
+
+                <div class="album_item">
+                    <div class="image">
+                        <a href="albumEigen.php"><img src="img/background_home.jpg" alt="#"></a>
+
+                    </div>
+
+                    <div class="overlay">
+                        <div class="text">Album 1</div>
+                    </div>
+                </div>
 
 
-
-    <div id="image_gallery">
-        <!-- HIER PHP foreach -->
-        <div class="item">
-            <img src="img/background_home.jpg" alt="#">
-        </div>
-
-    </div>
+            </div>
         </article>
     </div>
 
