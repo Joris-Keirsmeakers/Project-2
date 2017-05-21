@@ -1,0 +1,31 @@
+video{
+
+  position: absolute;
+  
+  margin: 0 auto;
+}
+
+canvas{
+  display: none;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+#camera-footer
+{
+    margin:0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    background-color: #C7133A;
+
+
+}
+
+.hidden{
+  display: none;
+}

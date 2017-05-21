@@ -14,11 +14,25 @@
 
   <canvas id="canvas">
    </canvas>
-   <div class="output">
+
      <img id="photo" alt="The screen capture will appear in this box.">
-   </div>
+   
 
 
   </body>
 </html>
 <script src="camera.js"></script>
+
+<style media="screen">
+video{
+  width: 100%;
+
+}
+canvas{
+  display: none;
+}
+img{
+  height:
+}
+
+</style>
