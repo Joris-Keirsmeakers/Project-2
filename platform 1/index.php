@@ -15,10 +15,8 @@
 <div class="container">
 
     <div class="logo">
-        <img src="img/logo_index.png" alt="logo"/>
+        <img src="img/logo_index2.png" alt="logo"/>
     </div>
-
-    <h2>Hier komt nog de baseline</h2>
 
     <div id="buttons">
         <div class="registration">

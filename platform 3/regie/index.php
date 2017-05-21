@@ -9,44 +9,49 @@
 </head>
 <body>
 
-<section id="left">
-    <div class="logo">
-        <a href="index.php"><img src="../img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+
+<section class="container">
+    <div class="column left-half_index">
+        <article>
+            <div class="logo">
+                <a href="index.php"><img src="../img/logo_index2.png"/></a>
+            </div>
+
+            <form action="" method="post" id="login">
+
+                <fieldset>
+                    <label for="username">Gebruikersnaam</label>
+                    <input name="username" id="username" type="text" placeholder="Geef hier je gebruikersnaam in" />
+                </fieldset>
+
+                <fieldset>
+                    <label for="password">Paswoord</label>
+                    <input name="password" id="password" type="password" placeholder="Geef hier je wachtwoord in"/>
+                </fieldset>
+
+                <fieldset id="stayloggin">
+                    <input type="checkbox" name="stayloggedin" value="ingelogd">Blijf ingelogd
+                    <a class="forgetPassword" href="#">Paswoord vergeten</a>
+                </fieldset>
+
+                <fieldset>
+                    <button class="button" type="submit">Inloggen</button>
+                </fieldset>
+
+            </form>
+
+            <a class="supporterLogin"href="../index.php">Inloggen als supporter</a>
+        </article>
     </div>
 
-    <form action="" method="post" id="login">
+    </div>
 
-        <fieldset>
-            <label for="username">Gebruikersnaam</label>
-            <input name="username" id="username" type="text" placeholder="Geef hier je gebruikersnaam in" />
-        </fieldset>
-
-        <fieldset>
-            <label for="password">Paswoord</label>
-            <input name="password" id="password" type="password" placeholder="Geef hier je wachtwoord in"/>
-        </fieldset>
-
-        <fieldset id="stayloggin">
-            <input type="checkbox" name="stayloggedin" value="ingelogd">Blijf ingelogd
-            <a class="forgetPassword" href="#">Paswoord vergeten</a>
-        </fieldset>
-
-        <fieldset>
-            <button class="button" type="submit">Inloggen</button>
-        </fieldset>
-    </form>
-
-    <a class="supporterLogin"href="../index.php">Inloggen als supporter</a>
-
-
-</section>
-
-<section id="right">
-
-    <h1>Welkom bij Evoke</h1>
-    <h4>de app voor de extra stadionbeleving</h4>
-
+    <div class="column right-half_index">
+        <article>
+            <h1>Welkom bij Evoke</h1>
+            <h4>de app voor een maximale stadionbeleving</h4>
+        </article>
+    </div>
 </section>
 </body>
 </html>

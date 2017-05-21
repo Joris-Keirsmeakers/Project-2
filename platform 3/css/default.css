@@ -6,37 +6,103 @@
 }
 
 
-html{
+html, body, section{
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
 }
 
-#left{
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    bottom: 0;
-    width: 30%;
-    background-color: #C7133A;
+.column {
+    display: flex;
+    flex-direction: column;
 }
+
+.container{
+    display:flex;
+}
+
+.left-half_index {
+    background-color: #C7133A;
+    flex: 1;
+}
+
+.left-half{
+    background-color: #C7133A;
+    flex: 1;
+}
+
+.right-half_index{
+    background: url("../img/background_index2.jpg")  no-repeat right center;
+    background-size: cover;
+    flex:2;
+}
+
+.right-half_home{
+    background: url("../img/background_home.jpg")  no-repeat center center;
+    background-size: cover;
+    flex:2;
+    justify-content: center;
+
+
+}
+
+.right-half {
+    flex:2;
+    background-color:white;
+}
+
+.right-half_index{
+    justify-content: center;
+
+}
+
+.right-half_index article{
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.right-half_index  h4{
+    color:white;
+    text-align: center;
+    margin-right: 50px;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.right-half_index h1{
+    color:white;
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.right-half h1{
+    color: #C7133A;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 30px;
+
+}
+
+.right-half .breadcrumb{
+    margin-left: 30px;
+}
+
 
 .logo img{
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-}
-
-#left h4{
-    text-align: center;
-    color:white;
-    font-size: 12px;
-    margin-top: 5px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 400;
-    margin-bottom: 80px;
+    margin-bottom: 45px;
 }
 
 
@@ -71,7 +137,6 @@ html{
     text-align: center;
     font-weight: 600;
     font-size: 25px;
-    margin-top: 10px;
 }
 
 .ul_menu .link_home:hover {
@@ -103,7 +168,7 @@ html{
     list-style: none;
     font-weight: 600;
     color:white;
-    padding: 0 20px;
+    padding: 0;
 }
 
 #menu .parent .sub-nav li a {
@@ -117,10 +182,7 @@ html{
     color: #F6D180;
 }
 
-
-
-
-#left p{
+.left-half p{
     color:white;
     text-align: center;
     font-size: 12px;
@@ -142,7 +204,7 @@ html{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 
@@ -162,9 +224,9 @@ html{
 .social .facebook{
     display: inline-block;
     background: url("../img/facebook.svg") no-repeat;
-    text-indent: -9999px;
-    width: 30px;
-    height: 30px;
+    text-indent: -9995px;
+    width: 40px;
+    height: 40px;
 
 }
 
@@ -176,8 +238,8 @@ html{
     display: inline-block;
     background: url("../img/twitter.svg") no-repeat;
     text-indent: -9999px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-left: 10px;
 
 }
@@ -195,8 +257,8 @@ html{
     display: inline-block;
     background: url("../img/instagram.svg") no-repeat;
     text-indent: -9999px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-left: 10px;
 
 }
@@ -212,69 +274,45 @@ html{
     margin-right: auto;
 }
 
-#right{
-    height: 740px;
-    top: 0;
-    bottom: 0;
+.logout:hover{
+    color:#F6D180;
+    text-decoration: underline;
+
 }
 
-#right h1{
-    margin-left: 550px;
-    margin-top: 600px;
-    position: absolute;
+.right-half_home h3{
     color:white;
-    font-size: 40px;
-    text-transform: uppercase;
-}
-
-#right h4{
-    margin-left: 550px;
-    margin-top: 650px;
-    position: absolute;
-    color:white;
-    font-size: 19px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-#right h3{
     text-align: center;
-    margin-left: 270px;
-    display: block;
-    margin-top: 380px;
-    position: absolute;
-    color:white;
-    text-decoration: none;
-    font-size: 20px;
+    margin-right: 50px;
+    font-size: 19px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 10px 30px;
-    border-radius: 20px;
-    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 
-#right a.btn_gallerij{
-   text-align: center;
-    margin-left: 430px;
+
+
+.right-half_home a.btn_gallerij{
+    color:white;
+    text-align: center;
     display: block;
     width: 100px;
-    margin-top: 450px;
-    position: absolute;
-    color:white;
-    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
+    text-decoration: none;
     text-transform: uppercase;
     padding: 10px 30px;
     border-radius: 20px;
     background-color:#C7133A;
-    margin-right: auto;
 }
 
-#right a:hover{
+.right-half_home a:hover{
     background-color: white;
     color: #C7133A;
     font-weight: 600;
@@ -313,5 +351,97 @@ ul.breadcrumb li a:hover {
 ul.breadcrumb .huidig{
     color: #C7133A;
 }
+
+
+.title_right{
+    margin-top: 30px;
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    form {
+        width: 70%;
+        height: 90%;
+
+    }
+
+
+    #stayloggin .forgetPassword{
+        display: block;
+        float:left;
+        text-align: center;
+
+    }
+
+    #stayloggin {
+        text-align: center;
+
+    }
+
+    #stayloggin input{
+        margin-right: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+    .left-half_index , .left-half_home, .left-half{
+        flex: 0.5;
+    }
+
+
+
+    .right-half_index, .right-half_home, .right-half{
+        flex: 1;
+    }
+
+    form{
+        width: 95%;
+        margin-left: 20px;
+        margin-right: 20px;
+
+
+    }
+
+    .right-half_index h4{
+        color:white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .right-half_index h1{
+        color:white;
+        font-size: 36px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #stayloggin .forgetPassword{
+        display: block;
+        float:left;
+        text-align: center;
+
+    }
+
+    #stayloggin {
+        text-align: center;
+
+    }
+
+    #stayloggin input{
+        margin-right: 5px;
+    }
+
+
+
+
+
+
+}
+
 
 

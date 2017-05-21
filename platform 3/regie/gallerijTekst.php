@@ -6,6 +6,8 @@
     <title>Evoke - Gallerij</title>
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/gallerij.css" />
+    <link rel="stylesheet" href="../css/content.css" />
+
 
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -15,10 +17,11 @@
 </head>
 <body>
 
-<section id="left">
+<section class="container">
+    <div class="column left-half">
+    <article>
     <div class="logo">
-        <a href="home.php"><img src="../img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="index.php"><img src="../img/logo_index2.png"/></a>
     </div>
 
     <div id="menu-overlay"></div>
@@ -53,25 +56,28 @@
             </ul>
         </div>
     </div>
-
-</section>
-<section id="right">
-
-    <h1>Content - tekst</h1>
+    </article>
+    </div>
+    <div class="column right-half">
+        <article>
+    <h1 class="title_right">Content - tekst</h1>
     <ul class="breadcrumb">
         <li><a href="home.php">Home</a></li>
-        <li><a href="gallerijTekst.php">Content</a></li>
+        <li><a href="gallerij.php">Gallerij</a></li>
+        <li><a href="gallerijTekst.php">Reacties</a></li>
         <li class="huidig">Tekst</li>
     </ul>
 
-    <div id="album_gallery">
-        <!-- HIER PHP foreach -->
-        <div class="album_item">
-            <a href="albumAlle_tekst.php"><img src="../img/background_home.jpg" alt="#"></a>
-            <p>Album 1</p>
-        </div>
+            <div class="album_gallery">
+
+                <div class="album_item">
+                    <a href="albumAlle_tekst.php"><img src="../img/background_home.jpg" alt="#"></a>
+                    <p>Album 1</p>
+                </div>
 
 
+            </div>
+        </article>
     </div>
 
 </section>

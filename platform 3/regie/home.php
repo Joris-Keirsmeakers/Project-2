@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evoke - account aanmaken</title>
+    <title>Evoke - home</title>
     <link rel="stylesheet" href="../css/default.css" />
 
     <script
@@ -11,24 +11,16 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
     <script src="../js/menu.js"></script>
-    <style>
 
-        #right{
-            background: url("../img/background_home.jpg") center right no-repeat;
-            background-size: cover;
-            position: fixed;
-            width: 70%;
-            margin-left: 431px;
-        }
-
-    </style>
 </head>
 <body>
 
-<section id="left">
+<section class="container">
+    <div class="column left-half">
+
+        <article>
     <div class="logo">
-        <a href="home.php"><img src="../img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="home.php"><img src="../img/logo_index2.png"/></a>
     </div>
 
     <div id="menu-overlay"></div>
@@ -64,10 +56,13 @@
         </div>
     </div>
 
+        </article>
+    </div>
 
-</section>
-<section id="right">
-
+    <div class="column right-half_home">
+        <h3>Bekijk wat er gedurende match van content is binnengekomen</h3>
+        <a class="btn_gallerij" href="gallerij.php">Ontdek</a>
+    </div>
 
 </section>
 </body>

@@ -9,10 +9,11 @@
 </head>
 <body>
 
-<section id="left">
+<section class="container">
+    <div class="column left-half_index">
+        <article>
     <div class="logo">
-        <a href="registration.php"><img src="img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+        <a href="registration.php"><img src="img/logo_index2.png"/></a>
     </div>
 
     <form action="" method="post" id="registration">
@@ -46,12 +47,12 @@
             <button class="button_account" type="submit">Account aanmaken</button>
         </fieldset>
     </form>
+        </article>
+    </div>
 
 
-</section>
-
-<section id="right">
-
+    <div class="column right-half_index">
+    </div>
 </section>
 </body>
 </html>

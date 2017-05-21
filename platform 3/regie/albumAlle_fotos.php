@@ -11,9 +11,13 @@ spl_autoload_register(function ($class) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evoke - profiel</title>
+    <title>Evoke</title>
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/profile.css"/>
+    <link rel="stylesheet" href="../css/content.css"/>
+    <link rel="stylesheet" href="../css/lightbox.css"/>
+
+
 
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -23,10 +27,12 @@ spl_autoload_register(function ($class) {
 </head>
 <body>
 
-<section id="left">
-    <div class="logo">
-        <a href="home.php"><img src="../img/logo_index.png"/></a>
-        <h4>hier komt baseline</h4>
+<section class="container">
+    <div class="column left-half">
+        <article>
+
+        <div class="logo">
+        <a href="home.php"><img src="../img/logo_index2.png"/></a>
     </div>
 
     <div id="menu-overlay"></div>
@@ -62,10 +68,14 @@ spl_autoload_register(function ($class) {
         </div>
     </div>
 
-</section>
-<section id="right">
 
-    <h1>Album 1</h1>
+        </article>
+    </div>
+
+    <div class="column right-half">
+        <article>
+
+    <h1 class="title_right">Album 1</h1>
     <ul class="breadcrumb">
         <li><a href="home.php">Home</a></li>
         <li><a href="gallerij.php">Gallerij</a></li>
@@ -73,23 +83,29 @@ spl_autoload_register(function ($class) {
         <li class="huidig">Album 1</li>
     </ul>
 
-    <p>Sorteren op:</p>
+    <p class="sort">Sorteren op:</p>
     <ul class="filter">
         <li><a href="#">Meest recent</a></li>
         <li><a href="#">Locatie (vak)</a></li>
     </ul>
 
+            <div class="album_gallery">
 
+                <div class="album_item">
+                    <a href="../img/background_home.jpg" data-lightbox="set" data-title="My caption"><img src="../img/background_home.jpg" alt="#" ></a>
+                </div>
 
-    <div id="image_gallery">
-        <!-- HIER PHP foreach -->
-        <div class="item">
-            <img src="../img/background_home.jpg" alt="#">
-        </div>
+                <div class="album_item">
+                    <a href="../img/background_index.jpg" data-lightbox="set" data-title="foto 2"><img src="../img/background_index.jpg" alt="#" ></a>
+                </div>
 
-
+            </div>
+        </article>
     </div>
 
+
 </section>
+
+<script src="../js/lightbox.js"></script>
 </body>
 </html>
