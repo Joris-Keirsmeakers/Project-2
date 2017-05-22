@@ -1,1 +1,14 @@
-<svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:#c7133a;}.cls-2{fill:#611924;}.cls-3{fill:none;stroke:#f6d180;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><title>create</title><circle class="cls-1" cx="50.91" cy="50.04" r="43.77"/><circle class="cls-2" cx="50.91" cy="50.04" r="35.65"/><line class="cls-3" x1="38.61" y1="50.08" x2="63.81" y2="50.08"/><line class="cls-3" x1="51.29" y1="37.28" x2="51.29" y2="62.72"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#611924;}
+	.st1{fill:none;stroke:#F6D180;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<title>create</title>
+<circle class="st0" cx="50.9" cy="50" r="43.8"/>
+<circle class="st0" cx="50.9" cy="50" r="35.7"/>
+<line class="st1" x1="38.6" y1="50.1" x2="63.8" y2="50.1"/>
+<line class="st1" x1="51.3" y1="37.3" x2="51.3" y2="62.7"/>
+</svg>
