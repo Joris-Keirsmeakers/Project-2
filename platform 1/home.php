@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+spl_autoload_register(function ($class) {
+    include_once("classes/".$class.".php");
+});
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,19 +25,17 @@
 <body>
 
 <main>
-    <h1>Welkom,</br> <span>Username</span></h1>
+    <h1>Welkom,</br> <span><?php echo $_SESSION['username']; ?></span></h1>
 
-    <p>Welkom op Evoke, de nieuwe app van </br>
-        KV Mechelen, waarmee jij de sfeer en stadion-beleving mee helpt bepalen </br>
+    <div class="home_text">
+    <p>Welkom op Evoke, de nieuwe app van KV Mechelen, waarmee jij de sfeer en stadion-beleving mee helpt bepalen
         tijdens de match. </p> </br>
 
-        <p>Tijdens de match kan je foto’s en reacties </br>
-            posten met een vooropgestelde hashtag. </br>
-            Elke match krijgt een nieuwe hashtag, zodat </br>
-            elke match een unieke belevening wordt. </p> </br>
+        <p>Tijdens de match kan je foto’s en reacties posten met een vooropgestelde hashtag.
+            Elke match krijgt een nieuwe hashtag, zodat elke match een unieke belevening wordt. </p>  </br>
 
-        <p>Vergeet ook niet in te loggen na de match op
-            onze site, om alle foto’s en reacties te herbekijken. </p> </br>
+        <p>Vergeet ook niet in te loggen na de match op onze site, om alle foto’s en reacties te herbekijken. </p>  </br>
+    </div>
 
     <div class="hashtag">
         <p>#Malinwa</p>

@@ -2,38 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evoke - Herbeleef</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/herbeleef.css">
 
 </head>
 
 <body>
-<h1>Overzicht reacties</h1>
 
+<h1>Profiel</h1>
 
 <div class="nav">
-    <a class="nav_first" href="herbeleef_fotos.php">Foto's</a>
-    <a class="nav_second" href="herbeleef_tekst.php">Reacties</a>
+    <a class="nav_first" href="profile_instellingen.php">Instellingen</a>
+    <a class="nav_second" href="profile_gepostTekst.php">Geposte media</a>
 </div>
 
+<div class="filter_profile">
+    <p><i>Sorteren op</i></p>
+    <ul>
+        <li><a href="profile_gepostFoto.php">Foto's</a></li>
+        <li><a href="profile_gepostTekst.php">Tekst</a></li>
+    </ul>
+</div>
 
 
 <section id="tekst">
     <div class="containerTekst">
-
-        <div class="filter">
-            <p>Sorteren op</p>
-            <ul>
-                <li><a href="#">Meest bekeken</a></li>
-                <li><a href="#">Locatie (vak)</a></li>
-                <li><a href="#">Recent</a></li>
-            </ul>
-        </div>
 
         <div id="post_list">
             <div class="post">
@@ -82,6 +80,9 @@
         </div>
 
     </div>
+
+
+
 
 </section>
 

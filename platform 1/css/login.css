@@ -20,7 +20,7 @@ html{
     margin-top: 5px;
     margin-left: 20px;
     padding-bottom: 10px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1.5px;
 }
 
@@ -29,7 +29,7 @@ html{
     font-size: 25px;
     margin-top: 5px;
     margin-left: 20px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1.5px;
 }
 
@@ -91,7 +91,7 @@ fieldset{
     text-align: right;
     font-size: 13px;
     color: #850D27;
-    font-weight: 700;
+    font-weight: 600;
     font-family: 'Open Sans', sans-serif;
 
 
@@ -99,7 +99,7 @@ fieldset{
 #stayloggin {
     font-size: 13px;
     color: #850D27;
-    font-weight: 700;
+    font-weight: 600;
     font-family: 'Open Sans', sans-serif;
     display: inline-block;
     margin-bottom: 10px;
@@ -113,15 +113,20 @@ fieldset{
 .noAccount{
     font-size: 13px;
     text-align: center;
-    color: #C7133A;
+    color: #850D27;
     font-weight: 600;
     padding-bottom: 40px;
+
 }
 
 .noAccount a{
     color: white;
-    font-weight: 600;
-
+    font-weight: 400;
+    margin-left: 5px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
 }
 
 .button{
@@ -152,7 +157,7 @@ fieldset{
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
     width: 280px;

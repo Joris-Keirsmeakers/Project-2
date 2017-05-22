@@ -24,7 +24,7 @@ main{
     margin-top: 5px;
     margin-left: 20px;
     padding-bottom: 10px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1.5px;
 }
 
@@ -54,7 +54,6 @@ main{
 }
 
 #img {
-    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -77,14 +76,14 @@ main{
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 100%;
     max-width: 700px;
 }
 
 #caption {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 100%;
     max-width: 700px;
     text-align: center;
     color: #ccc;

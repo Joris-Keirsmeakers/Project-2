@@ -16,9 +16,9 @@
 <main>
     <h3>Challenge of the match</h3>
     <h4><i>Doe mee en win</i></h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut  veniam, quis nostru</p> </br>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut  veniam, quis nostru</p>
+    <p>Om u alvast een duwtje in de rug te geven, dagen wij u uit om mee te doen met onze challenge.</p>
+</br><p>Aan het begin van de wedstrijd loopt ergens een mega superfan van KV Mechelen rond. Een extreem uitgedoste supporter dus. </p> </br>
+<p>Het is aan jou om deze te zoeken en daar een foto mee te nemen. De winnaar(s) krijgt een verrassingsprijs. Maak kans en dus accepteer onze challenge.  </p>
 
     <a href="create.php">Accept challenge</a>
 

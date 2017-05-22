@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/herbeleef.css">
+    <link rel="stylesheet" href="css/album.css">
+
+    <link href="css/lightbox.css" rel="stylesheet">
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -16,38 +27,39 @@
 
 <div class="nav">
     <a class="nav_first" href="profile_instellingen.php">Instellingen</a>
-    <a class="nav_second" href="profile_gepost.php">Geposte media</a>
+    <a class="nav_second" href="profile_gepostTekst.php">Geposte media</a>
 </div>
 
-<div class="filter">
+<div class="filter_profile">
     <p><i>Sorteren op</i></p>
     <ul>
-        <li><a href="#fotos">Foto's</a></li>
-        <li><a href="#tekst">Tekst</a></li>
+        <li><a href="profile_gepostFoto.php">Foto's</a></li>
+        <li><a href="profile_gepostTekst.php">Tekst</a></li>
     </ul>
 </div>
 
-<section id="fotos">
-    <div class="album"> <!-- ophalen uit database! !-->
+<div class="album_gallery">
 
-    </div>
-</section>
-
-<section id="tekst">
-    <div class="containerTekst">
-
-        <div class="post"> <!-- ophalen uit database! !-->
-            <p>User</p>
-            <p>Lorem ipsum dolor sitem amet, consecteteur adisplicling elit</p>
-            <p>25 maart 2017 - 19:35u</p>
-        </div>
-
+    <div class="album_item">
+        <a href="img/album1.jpg" data-lightbox="set" data-title="My caption"><img src="img/album1.jpg" alt="#" ></a>
     </div>
 
+    <div class="album_item">
+        <a href="img/album2.jpg" data-lightbox="set" data-title="foto 2"><img src="img/album2.jpg" alt="#" ></a>
+    </div>
+
+    <div class="album_item">
+        <a href="img/album3.jpg" data-lightbox="set" data-title="foto 2"><img src="img/album3.jpg" alt="#" ></a>
+    </div>
+
+    <div class="album_item">
+        <a href="img/album5.jpg" data-lightbox="set" data-title="foto 2"><img src="img/album5.jpg" alt="#" ></a>
+    </div>
 
 
 
-</section>
+</div>
+
 
 <footer>
 
@@ -64,6 +76,7 @@
 </footer>
 
 
+<script src="js/lightbox.js"></script>
 
 </body>
 </html>

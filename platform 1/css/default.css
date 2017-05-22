@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 *{
     margin: 0;
     padding: 0;
@@ -14,6 +13,8 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
 
 nav {
     position: relative;
@@ -73,6 +74,14 @@ nav ul li a.icon_herbeleef:active{
     width: 10px;
 }
 
+nav ul li a.icon_create{
+    display: block;
+    background: url("../img/create.svg") no-repeat;
+    text-indent: -99999px;
+    height: 12px;
+    width: 12px;
+}
+
 nav ul li a.icon_challenge{
     display: block;
     background: url("../img/challenge.svg") no-repeat;
@@ -113,30 +122,50 @@ nav ul li a.icon_profile:active{
 
 
 .nav_first, .nav_second{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 3px;
-
+    display: inline-block;
+    width: 50%;
+    padding: 8px 0px;
+    text-align: center;
+    letter-spacing: 1px;
 
 }
 
 .nav_first{
     background-color: #C7133A;
     color:white;
+    float:left;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.nav_first:visited,
+.nav_first:active{
+    font-weight: 700;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
 }
 
 .nav_second{
     background-color: white;
     color: #9a9a9a;
+    float:right;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 
 }
 
+.nav_second:visited,
+.nav_second:active {
+    font-weight: 700;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
+}
+
+
 .nav{
-    width: 280px;
     padding-top: 20px;
     margin-left: 20px;
+    width: 295px;
 
 }
 
@@ -149,7 +178,7 @@ nav ul li a.icon_profile:active{
 
 
 .filter {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 20px;
 }
 
@@ -175,7 +204,6 @@ nav ul li a.icon_profile:active{
 
 }
 
-.filter ul li a:visited,
 .filter ul li a:active{
     color: #F6D180;
     border-bottom: 2px solid #F6D180;

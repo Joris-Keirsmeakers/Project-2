@@ -102,20 +102,20 @@ if (!empty($_POST)) {
 
 
     <fieldset>
-        <label>Username</label>
-        <input id="username" name="username" type="text" placeholder=" Fill in your username"/>
+        <label>Gebruikersnaam</label>
+        <input id="username" name="username" type="text" placeholder="Vul je gebruikersnaam in"/>
     </fieldset>
 
 
 
     <fieldset>
         <label>Email</label>
-        <input id="email" name="email" type="text" placeholder=" Fill in your email"/>
+        <input id="email" name="email" type="text" placeholder="Vul je emailadres in"/>
     </fieldset>
 
     <fieldset>
-        <label>Password</label>
-        <input id="password" name="password" type="password" placeholder=" Fill in your password"/>
+        <label>Wachtwoord</label>
+        <input id="password" name="password" type="password" placeholder="Vul je wachtwoord in"/>
     </fieldset>
 
 

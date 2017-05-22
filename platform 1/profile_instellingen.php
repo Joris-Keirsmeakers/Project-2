@@ -17,7 +17,7 @@
 
 <div class="nav">
     <a class="nav_first" href="profile_instellingen.php">Instellingen</a>
-    <a class="nav_second" href="profile_gepost.php">Geposte media</a>
+    <a class="nav_second" href="profile_gepostFoto.php">Geposte media</a>
 </div>
 
 <form action="" method="post" id="settings">
