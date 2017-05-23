@@ -99,6 +99,19 @@ class Content
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function getPostsByAlbumID($album_id){
+
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("SELECT * FROM content WHERE album_id= :album_id");
+        $statement->bindValue(':album_id', $album_id);
+
+        if ($statement->execute()) {
+            return ($statement->fetchAll(PDO::FETCH_ASSOC));
+        } else {
+            return false;
+        }
+    }
+
 
 
     }
