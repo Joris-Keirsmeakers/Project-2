@@ -88,17 +88,39 @@ spl_autoload_register(function ($class) {
     </ul>
 
 
-            <div class="album_gallery">
-
-                <div class="album_item">
-                    <a href="../img/background_home.jpg" data-lightbox="set" data-title="My caption"><img src="../img/background_home.jpg" alt="#" ></a>
+            <div class="post">
+                <div class="post_left">
+                    <p>User</p>
                 </div>
 
-                <div class="album_item">
-                    <a href="../img/background_index.jpg" data-lightbox="set" data-title="foto 2"><img src="../img/background_index.jpg" alt="#" ></a>
+                <div class="post_content">
+                    <p>Lorem ipsum dolor sitem amet, consecteteur adisplicling elit</p>
+                    <p class="post_date">25 maart 2017 - 19:35u</p>
                 </div>
-
             </div>
+
+            <div class="post">
+                <div class="post_left">
+                    <p>User</p>
+                </div>
+
+                <div class="post_content">
+                    <p>Lorem ipsum dolor sitem amet, consecteteur adisplicling elit</p>
+                    <p class="post_date">25 maart 2017 - 19:35u</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post_left">
+                    <p>User</p>
+                </div>
+
+                <div class="post_content">
+                    <p>Lorem ipsum dolor sitem amet, consecteteur adisplicling elit</p>
+                    <p class="post_date">25 maart 2017 - 19:35u</p>
+                </div>
+            </div>
+    </div>
         </article>
     </div>
 

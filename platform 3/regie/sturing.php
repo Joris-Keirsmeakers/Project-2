@@ -71,6 +71,38 @@
                 <li class="huidig">Sturing</li>
             </ul>
 
+
+            <div class="meter">
+                <img src="../img/meter.png">
+            </div>
+
+            <div class="floatRight">
+                <div class="foto">
+                    <img src="../img/album3.jpg">
+                    <a href="#">Wijzigen</a>
+                </div>
+
+                <div class="tekst">
+
+                    <div class="post">
+                        <div class="post_left">
+                            <p>User</p>
+                        </div>
+
+                        <div class="post_content">
+                            <p>Lorem ipsum dolor sitem amet, consecteteur adisplicling elit</p>
+                            <p class="post_date">25 maart 2017 - 19:35u</p>
+                        </div>
+                    </div>
+
+                    <a href="#">Wijzigen</a>
+
+                </div>
+
+
+
+            </div>
+
         </article>
     </div>
 

@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+
+
+// $posts = Content::getPosts();
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,9 +62,27 @@
         <a href="img/album5.jpg" data-lightbox="set" data-title="foto 2"><img src="img/album5.jpg" alt="#" ></a>
     </div>
 
-
-
 </div>
+
+
+
+<!-- <div class="album_gallery">
+<?php foreach ($posts as $post):?>
+    <div class="album_item">
+        <a href="img/album1.jpg" data-lightbox="set" data-title="My caption"><img src="img/album1.jpg" alt="#" ></a> // HIER NOG PHP
+    </div>
+<?php endforeach; ?>
+</div> -->
+
+
+
+
+
+
+
+
+
+
 <footer>
 
     <nav class="icon-bar">
