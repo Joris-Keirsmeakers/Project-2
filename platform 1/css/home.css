@@ -13,9 +13,9 @@ main{
 }
 
 h1{
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
     color:white;
     margin-top: 40px;
     font-family: 'Open Sans', sans-serif;
@@ -65,12 +65,15 @@ main p{
 
 }
 
-.logout{
+.logout a{
     color: #C7133A;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     letter-spacing: 0.5px;
     border-bottom: 2px solid #C7133A;
+}
 
+.logout{
+    margin-bottom: 20px;
 }

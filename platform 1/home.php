@@ -29,7 +29,7 @@ spl_autoload_register(function ($class) {
 <body>
 
 <main>
-    <h1>Laat van je horen,  <?php echo $_SESSION['username']; ?> !</h1>
+    <h1>Laat van je horen !</h1>
 
     <div class="home_text">
     <p>Dit is Evoke, de nieuwe app van KV Mechelen! Jij helpt de sfeer en stadion-beleving mee bepalen
@@ -45,8 +45,9 @@ spl_autoload_register(function ($class) {
         <p>#Malinwa</p>
     </div>
 
-    <a class="logout" href="logout.php">Uitloggen</a>
-
+    <div class="logout">
+        <a href="logout.php">Uitloggen</a>
+    </div>
 </main>
 
 <footer>
@@ -60,12 +61,6 @@ spl_autoload_register(function ($class) {
             <li><a class="icon_profile" href="profile_instellingen.php">Profiel</a></li>
         </ul>
     </nav>
-
-
-    <div class="icon_1">
-        <a href="#" ></a>
-    </div>
-
 
 </footer>
 

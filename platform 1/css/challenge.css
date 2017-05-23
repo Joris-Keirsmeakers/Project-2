@@ -16,7 +16,7 @@ h3{
     font-weight: 600;
     color:white;
     letter-spacing: 1px;
-    margin-top: 100px;
+    margin-top: 40px;
     font-family: 'Open Sans', sans-serif;
     line-height: 28px;
     text-transform: uppercase;
@@ -56,6 +56,6 @@ main a{
     width: 280px;
     border-radius: 30px;
     font-family: 'Open Sans', sans-serif;
-    margin-bottom: 80px;
+    margin-bottom: 45px;
     margin-top: 40px;
 }

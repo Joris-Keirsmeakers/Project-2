@@ -23,7 +23,6 @@
 
 
 
-<section id="tekst">
     <div class="containerTekst">
 
         <div class="filter">
@@ -83,7 +82,6 @@
 
     </div>
 
-</section>
 
 <footer>
 
