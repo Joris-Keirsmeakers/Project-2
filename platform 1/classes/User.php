@@ -4,6 +4,8 @@ class User
     private $m_sUsername;
     private $m_sMail;
     private $m_sPassword;
+    private $m_sVak;
+    private $m_iPostAmount;
 
     public function __set($p_sProperty, $p_vValue)
     {
@@ -21,6 +23,13 @@ class User
                 $this->m_sPassword  = $p_vValue;
                 break;
 
+            case "vak":
+                $this->m_sVak  = $p_vValue;
+                break;
+
+            case "postamount":
+                $this->m_iPostAmount  = $p_vValue;
+                break;
         }
     }
 
@@ -42,7 +51,14 @@ class User
                 return $this->m_sPassword;
                 break;
 
-        }
+            case "vak":
+                return  $this->m_sVak;
+                break;
+
+            case "postamount":
+                return $this->m_iPostAmount;
+                break;
+            }
         return $vResult;
 
     }
@@ -68,7 +84,7 @@ class User
             } else {
 
                 //query schrijven
-                $statement = $conn->prepare("INSERT INTO users (username,mail,password) VALUES (:username,:mail,:password)");
+                $statement = $conn->prepare("INSERT INTO `users` (Username, Mail, Password) VALUES (:username,:mail,:password)");
                 $statement->bindValue(":username", $this->m_sUsername);
                 $statement->bindValue(":mail", $this->m_sMail);
                 $statement->bindValue(":password", $this->m_sPassword);
@@ -80,11 +96,10 @@ class User
                 return ($res);
 
             }
-        }
+          }
         }
 
-        public
-        static function getUsers()
+        public static function getUsers()
         {
             $conn = Db::getInstance();
             $stmt = $conn->prepare("SELECT * FROM users");
@@ -92,5 +107,49 @@ class User
 
             return ($stmt->fetchAll(PDO::FETCH_ASSOC));
         }
-    }
+
+        //checkPassword()
+
+        public function canLogin()
+        { //checken of we mogen inloggen
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT * FROM `users` WHERE (Mail = :mail)");
+            //echo $this->m_sMail;
+            $statement->bindValue(":mail", $this->m_sMail);
+            $statement->execute();
+            $res = $statement->fetch(\PDO::FETCH_ASSOC);
+            $password = $res["Password"];
+            if (password_verify($this->m_sPassword, $password)) {
+                return true;
+            } else {
+                throw new \Exception("Failed to sign in. Wrong password or username.");
+            }
+        }
+
+
+    public function handleLogin()
+    { //inloggen
+        try {
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT * FROM `users` WHERE (mail = :mail)");
+            $statement->bindValue(":mail", $this->m_sMail);
+            $statement->execute();
+            $res = $statement->fetch(\PDO::FETCH_ASSOC);
+
+            //print_r($res);
+            $id = $res["id"];
+            $postamount = $res['postamount'];
+            $username = $res['Username'];
+
+            $_SESSION['id']=$id;
+            $_SESSION['username'] = $username;
+            $_SESSION['postamount'] = $postamount;
+
+           header('Location: home.php');
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+      }
+  }
+
     ?>

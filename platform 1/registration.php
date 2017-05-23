@@ -33,21 +33,18 @@ if (!empty($_POST)) {
             $error = "Your password has to be at least 6 characters long.";
         }
 
-        $user->Username = htmlspecialchars($_POST["username"]);
-        $user->Mail = htmlspecialchars($_POST["email"]);
-        $user->Password = password_hash($_POST["password"], PASSWORD_DEFAULT, $options);
-
 
         // checken of er een error is door de lege velden
         if (!isset($error)) {
-            if ($user->save()) {
-
+                $user->Username = htmlspecialchars($_POST["username"]);
+                $user->Mail = htmlspecialchars($_POST["email"]);
+                $user->Password = password_hash($_POST["password"], PASSWORD_DEFAULT, $options);
+                //Vak keuze nog invoegen als optioneel.
+                $user->save();
                 session_start();
-
                 $_SESSION['email'] = $user->Mail;
                 $_SESSION['username'] = $user->Username;
                 $_SESSION['fullname'] = $user->Fullname;
-
                 header('location: home.php');
 
             } else {
@@ -55,8 +52,8 @@ if (!empty($_POST)) {
                 $error = "This e-mail address is already in use in the database. Please try again with another address.";
             }
 
-        }else{
-        }
+
+
     } catch (PDOException $e) {
         $error= $e->getMessage();
     }

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,24 +14,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 
-</head>
-<body>
-  <div class="camera">
-    <video id="video" class="center">Video stream not available.</video>
-  </div>
 
-  <canvas id="canvas">
-  </canvas>
+</head>
+
+
+<body>
+
+  <form id="confirm-post" action="" method="post">
+    <button type="button" name="Again" class="back" id="camera-back"></button>
+    <button type="button" name="yes" id="upload">Upload foto!</button>
+  </form>
 
   <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box.">
+    <img id="photo" src="./picture-posts/latest.png" alt="The screen capture will appear in this box.">
   </div>
 
-  <form method="post" action="review-photo.php" id="uploadToDb">
-    <input type="file" name="file" id="file"accept="image/*" class="hidden">
-    <div class="button-wrapper">
-      <button type="submit" name="button" id="startbutton" class="startbutton">Snap!</button>
-    </div>
+
 
   </form>
 </body>
@@ -44,7 +44,5 @@
             <li><a class="icon_profile" href="profile_instellingen.php">Profiel</a></li>
         </ul>
     </nav>
-
 </footer>
-
-<script src="./js/camera.js"></script>
+<script src="./js/latest-post.js"></script>

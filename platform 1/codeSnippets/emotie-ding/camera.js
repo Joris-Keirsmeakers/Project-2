@@ -26,7 +26,7 @@
       startbutton = document.getElementById('startbutton');
 
 
-   navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
+   navigator.getUserMedia({ audio: false, video: { width: 1280, height: 720 } },
       function(stream) {
          var video = document.querySelector('video');
          video.srcObject = stream;

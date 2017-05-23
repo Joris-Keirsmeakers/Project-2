@@ -4,44 +4,31 @@ spl_autoload_register(function ($class) {
     include_once("classes/".$class.".php");
 });
 
-if (!empty($_POST)) {
-    try {
-        // gegevens opslaan
-        $user = new User();
-
-        // error handling voor lege velden
-        if (empty($user->Username = $_POST['username'])) {
-            $error = "Field 'email' can not be empty.";
-        } elseif (empty($user->Password = $_POST['password'])) {
-            $error = "Field 'password' can not be empty.";
-        }
-
-        // enkel code doen indien alle velden ingevuld zijn
-        if (!isset($error)) {
-
-            if ($user->checkPassword()){
-
-                $res = User::getUser($user->Username);
-
-                session_start();
-
-                // we maken session vars aan voor later
-                $_SESSION['username'] = $user->Username;
-                $_SESSION['username'] = $res['Username'];
-
-                // we sturen de user door
-                header('location:home.php');
-            } else {
-                $error = 'Password does not match. Please try again.';
-            }
-        } else {
-            $error = "User does not exist in database. Please register first." . "</br>" . "<a href='registration.php'>Sign up here</a>";
-        }
-    } catch (PDOException $e) {
-        $error = $e->getMessage();
-    }
+if(!isset($_SESSION))
+{
+  session_start();
 }
 
+if (!empty($_POST)) {
+    try {
+        if (!empty($_POST['e-mailadres'] && $_POST['password'])) {
+            $user = new User();
+
+            $user->Mail = htmlspecialchars($_POST['e-mailadres']);
+            $user->Password = htmlspecialchars($_POST['password']);
+
+            if ($user->canLogin()) {
+                $user->handleLogin();
+            } else {
+                $error = "<p class='alert alert-danger'> Failed to sign in. </p>";
+            }
+        } else {
+            throw new exception("<p class='alert alert-danger'>Failed to sign in. All fields need to be filled in.</p>");
+        }
+    } catch (exception $e) {
+        $error= $e->getMessage();
+    }
+}
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,8 +66,8 @@ if (!empty($_POST)) {
 <form action="" method="post" id="login">
 
     <fieldset>
-        <label for="username">Gebruikersnaam</label>
-        <input name="username" id="username" type="text" placeholder="Geef hier je gebruikersnaam in" />
+        <label for="e-mailadres">e-mailadres</label>
+        <input name="e-mailadres" id="e-mailadres" type="text" placeholder="Geef hier je gebruikersnaam in" />
     </fieldset>
 
     <fieldset>
@@ -105,7 +92,3 @@ if (!empty($_POST)) {
 
 </body>
 </html>
-
-
-
-

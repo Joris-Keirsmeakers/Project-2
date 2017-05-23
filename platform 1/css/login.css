@@ -57,7 +57,7 @@ fieldset{
 
 }
 
-#login input#username, #login input#password, #registration input{
+#login input#e-mailadres, #login input#password, #registration input{
     border: 0;
     outline: 0;
     background: transparent;

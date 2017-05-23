@@ -23,7 +23,7 @@ var photo = null;
 var startbutton = null;
 
 function startup() {
-    window.alert("Hey")
+  console.log("starting up camera")
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
@@ -32,6 +32,7 @@ function startup() {
 
  navigator.getUserMedia({ audio: true, video: { width: width, height: height } },
     function(stream) {
+      console.log(width);
        var video = document.querySelector('video');
        video.srcObject = stream;
        video.onloadedmetadata = function(e) {
@@ -45,7 +46,7 @@ function startup() {
     video.addEventListener('canplay', function(ev){
     if (!streaming) {
       width= video.videoWidth / (video.videoHeight/height);
-
+      console.log(width);
       video.style.margin = "0 -"+width/4+"px"
 
       video.setAttribute('width', width);
@@ -83,17 +84,21 @@ function takepicture() {
     context.drawImage(video, 0, 0, width, height);
 
     var data = canvas.toDataURL('image/png');
-    console.log(data)
+    console.log("Picture taken")
     photo.setAttribute('src', data);
+      $.ajax({
+        type:"POST",
+        url:"./ajax/camera.php",
+        data:{"data" : data},
+          })
+          .done(function(res) {
+            console.log("done")
+            console.log(res);
+            window.location.replace('./post_check.php')
+          });
+
   } else {
     clearphoto();
   }
 }
 startup();
-
-$("#uploadToDb").submit(function(event){
-console.log("test")
-event.preventDefault();
-
-
-});
