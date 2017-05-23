@@ -30,7 +30,7 @@ function startup() {
     startbutton = document.getElementById('startbutton');
 
 
- navigator.getUserMedia({ audio: true, video: { width: width, height: height } },
+ navigator.getUserMedia({ audio: false, video: { width: width, height: height } },
     function(stream) {
       console.log(width);
        var video = document.querySelector('video');
@@ -94,7 +94,7 @@ function takepicture() {
           .done(function(res) {
             console.log("done")
             console.log(res);
-            window.location.replace('./post_check.php')
+          //  window.location.replace('./post_check.php')
           });
 
   } else {
