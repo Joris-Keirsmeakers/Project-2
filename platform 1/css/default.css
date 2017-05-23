@@ -36,7 +36,7 @@ nav ul li a {
     padding: 10px 14px;
     text-decoration: none;
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-right: 10px;
 }
 
@@ -216,17 +216,18 @@ section{
 }
 
 
-
 footer
 {
-    margin-left: -20px;
+    width: 100%;
     position: absolute;
     text-align: center;
-    width: 100%;
-    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #C7133A;
-
+    z-index: 150;
 
 }
+
+
 
 
