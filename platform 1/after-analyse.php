@@ -5,14 +5,45 @@ spl_autoload_register(function ($class) {
     include_once("classes/".$class.".php");
 });
 
-$happy = 4;
+$happy = 0;
 $angry =0;
-$surprised =1;
+$surprised =0;
 $sad=0;
 $disgusting=0;
 $scared=0;
 $contempt=0;
 
+
+
+
+$conn = Db::getInstance();
+$statement = $conn->prepare("SELECT `emotion` FROM `emotionaldata`");
+$statement->execute();
+$res=$statement->fetchAll(PDO::FETCH_ASSOC);
+//print_r($res);
+foreach($res as $emotie){
+  //print_r($emotie);
+  //echo ($emotie['emotion']);
+  if ($emotie['emotion']=="happiness") {
+    $happy++;
+  }
+  if ($emotie['emotion']=='anger') {
+    $angry++;
+  }
+  if ($emotie['emotion']=='surprise') {
+    $surprised++;
+  }
+  if ($emotie['emotion']=='disgust') {
+    $disgusting++;
+  }
+  if ($emotie['emotion']=='fear') {
+    $scared++;
+  }
+  if ($emotie['emotion']=='contempt') {
+    $contempt++;
+  }
+}
+//echo $_SESSION['lastUserContent'];
 ?><!DOCTYPE html>
 <html>
   <head>
