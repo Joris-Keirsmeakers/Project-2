@@ -23,7 +23,7 @@ echo $_SESSION['lastUserContent'];
             },
             type: "POST",
             // Request body
-            data: '{"url": "https://pbs.twimg.com/profile_images/665548484385349633/5_GTaD8H_400x400.jpg"}',
+            data: '{"url": "http://www.wilmakarels.nl/images/image/foto-tips/groepsfoto-gezin.jpg"}',
         })
         .done(function(data) {
           //  alert("success");
@@ -32,7 +32,7 @@ echo $_SESSION['lastUserContent'];
 
             $.ajax({
               type:"POST",
-              url:"analyse.php",
+              url:"./ajax/analyse.php",
               data:{"data" : fotodatatosend},
               datatype:"json"
             })

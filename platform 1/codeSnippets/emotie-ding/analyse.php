@@ -80,7 +80,7 @@ $request->setMethod(HTTP_Request2::METHOD_POST);
     foreach ($res as $face ) {
       echo "<div class='face'>";
 
-    //print_r($face);
+    print_r($face);
         //  include_once 'analyse.php';
         //var_dump($res['0']);
 
