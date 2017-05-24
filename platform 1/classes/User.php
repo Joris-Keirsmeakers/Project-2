@@ -166,6 +166,7 @@ class User
     $statement->bindValue(":id", $_SESSION['id']);
     $statement->execute();
     $res = $statement->fetch(\PDO::FETCH_ASSOC);
+    $_SESSION['postamount'] = $_SESSION['postamount']+1;
   }
 
 }

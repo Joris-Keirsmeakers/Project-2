@@ -50,19 +50,16 @@ spl_autoload_register(function ($class) {
             <li><a class="icon_profile" href="profile_instellingen.php">Profiel</a></li>
         </ul>
     </nav>
-</footer>
-
-<?php if (!empty($_POST['comment'])) {
+</footer><?php if (!empty($_POST['comment'])) {
   $content = new Content;
   $content->comment = $_POST['comment'];
   $content->Save();
-
   $user = new user;
   $user->id =$_SESSION['id'];
   $user->updatePostAmount();
-
-  header('Location: home.php');
-
-
-} ?>
+  echo("<script> location.href = 'home.php' </script>");
+  echo "test";
+}
+?>
+<br>
 <script src="./js/latest-post.js"></script>
