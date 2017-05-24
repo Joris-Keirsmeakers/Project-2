@@ -57,8 +57,9 @@ spl_autoload_register(function ($class) {
   $user = new user;
   $user->id =$_SESSION['id'];
   $user->updatePostAmount();
-  echo("<script> location.href = 'home.php' </script>");
+  echo("<script> location.href = 'emotie.php' </script>");
   echo "test";
+  include_once("./emotie.php");
 }
 ?>
 <br>
