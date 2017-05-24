@@ -35,7 +35,7 @@ spl_autoload_register(function ($class) {
   <form method="post" id="comment-div">
   <label for="comment">Plaats een boodschap bij deze foto:</label>
     <textarea rows="4" name="comment" id="comment" maxlength="140"> </textarea>
-    <button type="submit" class="button">Submit picture</button>
+    <button type="submit" class="button">Submit </button>
   </form>
 
 </body>
@@ -56,5 +56,13 @@ spl_autoload_register(function ($class) {
   $content = new Content;
   $content->comment = $_POST['comment'];
   $content->Save();
+
+  $user = new user;
+  $user->id =$_SESSION['id'];
+  $user->updatePostAmount();
+
+  header('Location: home.php');
+
+
 } ?>
 <script src="./js/latest-post.js"></script>

@@ -9,7 +9,7 @@ spl_autoload_register(function ($class) {
 //echo $_SESSION['id'];
 //echo $_SESSION['username'];
 //echo $_SESSION['postamount'];
-echo $_SESSION['lastUserContent'];
+//echo $_SESSION['lastUserContent'];
 
 ?>
 

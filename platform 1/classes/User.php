@@ -11,6 +11,10 @@ class User
     {
         switch ($p_sProperty) {
 
+            case"id":
+                $this->m_iId = $p_vValue;
+                break;
+
             case "Username":
                 $this->m_sUsername  = $p_vValue;
                 break;
@@ -38,6 +42,10 @@ class User
         $vResult = null;
 
         switch ($p_sProperty) {
+
+            case"id":
+                return $this->m_iId;
+                break;
 
             case "Username":
                 return $this->m_sUsername;
@@ -150,6 +158,16 @@ class User
             echo $e->getMessage();
         }
       }
+
+  public function updatePostAmount()
+  {
+    $conn = Db::getInstance();
+    $statement = $conn->prepare("UPDATE `users` SET `postamount` = (`postamount`+1) WHERE (id = :id)");
+    $statement->bindValue(":id", $_SESSION['id']);
+    $statement->execute();
+    $res = $statement->fetch(\PDO::FETCH_ASSOC);
   }
+
+}
 
     ?>

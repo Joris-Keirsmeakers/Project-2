@@ -33,12 +33,12 @@ class Content
                 $this->m_sMatch = $p_vValue;
                 break;
 
-            case "albumID":
+            case "album_id":
                 $this->m_sMatch = $p_vValue;
                 break;
 
             case "comment":
-                $this->m_sComment = $m_sComment;
+                $this->m_sComment = $p_vValue;
                 break;
 
         }
@@ -58,7 +58,7 @@ class Content
                 return $this->m_sContent;
                 break;
 
-            case "userId":
+            case "user_id":
                 return $this->m_iUserID;
                 break;
 
@@ -70,7 +70,7 @@ class Content
                 return $this->m_sMatch;
                 break;
 
-            case "albumID":
+            case "album_id":
                 return $this->m_iAlbumId;
                 break;
 
@@ -83,16 +83,18 @@ class Content
 
     public function Save(){
 
+        //echo $_SESSION['lastUserContent'];
+        //echo $_SESSION['id'];
         $conn = Db::getInstance();
-
-        $statement = $conn->prepare("INSERT INTO content (id, post, user_id, match, album_id, type, comment) VALUES (:id,:post,:userId,:match, :album_id, :type, :comment)");
-        $statement->bindValue(":post", htmlspecialchars($_SESSION['lastUserContent']));
-        $statement->bindValue(":user_id", htmlspecialchars($_SESSION['id']));
+        $statement = $conn->prepare("INSERT INTO `content` (`post`, `user_id`, `match`, `album_id`, `type`, `comment`) VALUES (:post,:user_id,:match,:album_id, :type, :comment)");
+        $statement->bindValue(":post", $_SESSION['lastUserContent']);
+        $statement->bindValue(":user_id", $_SESSION['id']);
+        $statement->bindValue(":album_id", 0);
         $statement->bindValue(":match", "testmatch");
         $statement->bindValue(":type", "foto");
-        $statement->bindValue(":comment", $this->m_sComment);
-
+        $statement->bindValue(":comment", htmlspecialchars($this->m_sComment));
         $res = $statement->execute();
+      //  echo $res;
 
         return ($res);
     }

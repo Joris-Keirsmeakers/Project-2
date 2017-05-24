@@ -1,4 +1,5 @@
 <?php
+session_start();
 // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
 require_once 'HTTP/Request2.php';
 
@@ -25,7 +26,7 @@ $request->setMethod(HTTP_Request2::METHOD_POST);
 
   if (!empty($_POST['picture'])) {
       $body = $_POST['picture'];
-      $request->setBody('{"url":"'.$body.'"}');
+      $request->setBody('{"url":"'.$_SESSION['lastUserContent'].'"}');
 
       try {
           $response = $request->send();
@@ -59,21 +60,11 @@ $request->setMethod(HTTP_Request2::METHOD_POST);
     <title></title>
   </head>
   <body>
-    <form method="post">
-      <label for="picture">Img url</label>
-      <input type="text" name="picture" id="picture">
-      <br>
-      <label for="file"></label> Upload file
-       <input type="file" name="file" id="file"accept="image/*">
-      <br>
-      <button type="submit" name="button">Upload</button>
-    </form>
-  <?php echo "https://pbs.twimg.com/profile_images/665548484385349633/5_GTaD8H_400x400.jpg"; ?>
-  <br>
 
 
 
-<?php echo "<img src=".$_POST['picture'].">";
+
+<?php echo "<img src=".$_SESSION['lastUserContent'].">";
    if (!empty($res)) {
 
       print_r($res);
