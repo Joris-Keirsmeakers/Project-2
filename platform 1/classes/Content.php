@@ -7,6 +7,7 @@ class Content
     private $m_sType;
     private $m_sMatch;
     private $m_iAlbumId;
+    private $m_sComment;
 
     public function __set($p_sProperty, $p_vValue)
     {
@@ -34,6 +35,10 @@ class Content
 
             case "albumID":
                 $this->m_sMatch = $p_vValue;
+                break;
+
+            case "comment":
+                $this->m_sComment = $m_sComment;
                 break;
 
         }
@@ -68,6 +73,9 @@ class Content
             case "albumID":
                 return $this->m_iAlbumId;
                 break;
+
+            case "comment":
+                return $this->m_sComment;
             }
         return $vResult;
 
@@ -77,13 +85,12 @@ class Content
 
         $conn = Db::getInstance();
 
-        $statement = $conn->prepare("INSERT INTO content (id,post, user_id, match, album_id, type) VALUES (:id,:post,:userId,:match, :album_id, :type)");
-        $statement->bindValue(":id", htmlspecialchars($this->m_iID));
-        $statement->bindValue(":post", htmlspecialchars($this->m_sContent));
-        $statement->bindValue(":user_id", htmlspecialchars($this->m_iUserID));
-        $statement->bindValue(":match", htmlspecialchars($this->m_sMatch));
-        $statement->bindValue(":album_id", htmlspecialchars($this->m_iAlbumId));
-        $statement->bindValue(":type", htmlspecialchars($this->m_sType));
+        $statement = $conn->prepare("INSERT INTO content (id, post, user_id, match, album_id, type, comment) VALUES (:id,:post,:userId,:match, :album_id, :type, :comment)");
+        $statement->bindValue(":post", htmlspecialchars($_SESSION['lastUserContent']));
+        $statement->bindValue(":user_id", htmlspecialchars($_SESSION['id']));
+        $statement->bindValue(":match", "testmatch");
+        $statement->bindValue(":type", "foto");
+        $statement->bindValue(":comment", $this->m_sComment);
 
         $res = $statement->execute();
 

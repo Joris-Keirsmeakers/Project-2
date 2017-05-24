@@ -1,6 +1,6 @@
 video{
 
-  position: absolute;
+  position: fixed;
 
   margin: 0 auto;
 }
@@ -20,7 +20,7 @@ body{
 #camera-footer
 {
     margin:0;
-    position: absolute;
+    position: fixed;
     text-align: center;
     width: 100%;
     bottom: 0;
@@ -55,7 +55,6 @@ height: 60px;
   display: flex;
   background-color:#C7133A;
   flex-flow: row wrap;
-
   justify-content: space-around;
   width: 100%;
 }
@@ -78,3 +77,64 @@ background-repeat:no-repeat;
 background-position: center;
 background-size: contain;
  }
+
+ #comment-div{
+    display: flex;
+    flex-flow: column;
+    height:100px;
+    position: fixed;
+    bottom:45.2px;
+    margin: 0 auto;
+    width: 95%;
+    padding: 2.5%;
+    background-color: White;
+ }
+ #comment-div label{
+   display: block;
+   text-transform: uppercase;
+   font-size: 11px;
+   color: #850D27;
+   letter-spacing:1px;
+   font-weight: 700;
+   font-family: 'Open Sans', sans-serif;
+
+ }
+
+ #comment-div #comment{
+   border: 0;
+   outline: 0;
+   background: transparent;
+   border-bottom: 2px solid #850D27;
+   font-size: 1em;
+   padding: 15px 0;
+   font-weight: 400;
+   color: #850D27;
+   font-family: 'Open Sans', sans-serif;
+   align-self: center;
+   resize: none;
+   outline: none;
+   width: 100%
+ }
+
+#photo-check{
+  position: fixed;
+}
+
+.button{
+    background-color: #C7133A;
+    border: none;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 20%;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 3px;
+    padding: 2px;
+    align-self: center;
+
+}

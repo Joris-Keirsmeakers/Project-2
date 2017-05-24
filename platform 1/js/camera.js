@@ -94,7 +94,7 @@ function takepicture() {
           .done(function(res) {
             console.log("done")
             console.log(res);
-          //  window.location.replace('./post_check.php')
+            window.location.replace('./post_check.php')
           });
 
   } else {

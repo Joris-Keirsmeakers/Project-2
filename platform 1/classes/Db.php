@@ -10,7 +10,7 @@ class Db
             return self::$conn;
         } else {
 
-            self::$conn = new PDO("mysql:host=localhost;dbname=Project", "root", "");
+            self::$conn = new PDO("mysql:host=localhost;dbname=evoke", "root", "");
             return self::$conn;
         }
     }

@@ -1,5 +1,10 @@
 <?php
 session_start();
+spl_autoload_register(function ($class) {
+    include_once("classes/".$class.".php");
+});
+
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,18 +25,19 @@ session_start();
 
 <body>
 
-  <form id="confirm-post" action="" method="post">
-    <button type="button" name="Again" class="back" id="camera-back"></button>
-    <button type="button" name="yes" id="upload">Upload foto!</button>
-  </form>
+  <a href="create.php"></a>
 
   <div class="output">
-    <img id="photo" src="./picture-posts/latest.png" alt="The screen capture will appear in this box.">
+    <img id="photo-check" <?php echo "src=./picture-posts/Test-match/". $_SESSION['id'].'-'.$_SESSION['postamount'].'.png'; ?> alt="The screen capture will appear in this box.">
   </div>
 
 
-
+  <form method="post" id="comment-div">
+  <label for="comment">Plaats een boodschap bij deze foto:</label>
+    <textarea rows="4" name="comment" id="comment" maxlength="140"> </textarea>
+    <button type="submit" class="button">Submit picture</button>
   </form>
+
 </body>
 <footer id="camera-footer">
 
@@ -45,4 +51,10 @@ session_start();
         </ul>
     </nav>
 </footer>
+
+<?php if (!empty($_POST['comment'])) {
+  $content = new Content;
+  $content->comment = $_POST['comment'];
+  $content->Save();
+} ?>
 <script src="./js/latest-post.js"></script>
